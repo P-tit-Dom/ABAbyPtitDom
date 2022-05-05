@@ -1,52 +1,46 @@
-# gitignore template for Drupal 8 projects
+# This file contains default .gitignore rules. To use it, copy it to .gitignore,
+# and it will cause files like your settings.php and user-uploaded files to be
+# excluded from Git version control. This is a common strategy to avoid
+# accidentally including private information in public repositories and patch
+# files.
 #
-# earlier versions of Drupal are tracked in `community/PHP/`
+# Because .gitignore can be specific to your site, this file has a different
+# name; updating Drupal core will not override your custom .gitignore file.
 
-# Ignore configuration files that may contain sensitive information
-/sites/*/*settings*.php
-/sites/*/*services*.yml
+# Ignore core when managing all of a project's dependencies with Composer
+# including Drupal core.
+core
 
-# Ignore paths that may contain user-generated content
-/sites/*/files
-/sites/*/public
-/sites/*/private
-/sites/*/files-public
-/sites/*/files-private
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory. It's important
+# that core/assets/vendor and any other vendor directories within contrib or
+# custom module, theme, etc., are not ignored unless you purposely do so.
+Drupal/base_drupal/vendor/
 
-# Ignore paths that may contain temporary files
-/sites/*/translations
-/sites/*/tmp
-/sites/*/cache
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+sites/*/services*.yml
 
-# Ignore testing related files
-/sites/simpletest
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
 
-# Ignore drupal core (if not versioning drupal sources)
-/Drupal/base_drupal/core
-/Drupal/base_drupal/modules/README.txt
-/Drupal/base_drupal/profiles/README.txt
-/Drupal/base_drupal/sites/README.txt
-/Drupal/base_drupal/sites/example.sites.php
-/Drupal/base_drupal/sites/example.settings.local.php
-/Drupal/base_drupal/sites/development.services.yml
-/Drupal/base_drupal/themes/README.txt
-/Drupal/base_drupal/vendor
-/Drupal/base_drupal/.csslintrc
-/Drupal/base_drupal/.editorconfig
-/Drupal/base_drupal/.eslintignore
-/Drupal/base_drupal/.eslintrc.json
-/Drupal/base_drupal/.gitattributes
-/Drupal/base_drupal/.htaccess
-/Drupal/base_drupal/autoload.php
-/Drupal/base_drupal/composer.json
-/Drupal/base_drupal/composer.lock
-/Drupal/base_drupal/example.gitignore
-/Drupal/base_drupal/index.php
-/Drupal/base_drupal1/LICENSE.txt
-/Drupal/base_drupal/README.txt
-/Drupal/base_drupal/robots.txt
-/Drupal/base_drupal/update.php
-/Drupal/base_drupal/web.config
+# Ignore SimpleTest multi-site environment.
+sites/simpletest
+
+# If you prefer to store your .gitignore file in the sites/ folder, comment
+# or delete the previous settings and uncomment the following ones, instead.
+
+# Ignore configuration files that may contain sensitive information.
+*/settings*.php
+
+# Ignore paths that contain user-generated content.
+*/files
+*/private
+
+# Ignore SimpleTest multi-site environment.
+simpletest
+
 
 # IDE temporary files
 .vs/
