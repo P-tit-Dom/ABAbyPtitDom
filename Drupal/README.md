@@ -29,7 +29,62 @@ Les blocks de toutes les zones sont remplacables, interchangeablent, adaptables 
 
 ## Installation des modules
 
-Drupal possède de base un certains nombre de bloque de fonctionnalités (on parlera de "Modules"), dont certaines sont téléchargées, installées sur le site mais pas sélectionnées.
+Drupal possède de base un certains nombre de bloques de fonctionnalités (on parlera de "Modules"), dont certains sont téléchargés, installés sur le site mais pas sélectionnée.
 
 Voyons l'ajout de modules supplémentaires.
 
+Dans "Manage" -> "Extend" on peut voir l'ensemble des modules prétéléchargés.
+
+En cliquant sur "+ Add new module", on va pouvoir rentrer l'URL de téléchargement des modules à ajouter (URL en lien plus haut).
+
+Après les avoir ajoutés, il faut les sélectionner. Dans "Extend", sélectionner :
+- Quick edit
+- Admin Toolbar
+- Entity Print
+- Webform
+- Webform Access
+- Webform Custom Options
+- Webform Entity Print (PDF) + (PDF) Attachment
+- Webform Options Limit
+- Webform UI
+
+## Ajout d'onglets dans la sélection des Menus
+
+On va our ajouter des onglets au menu si dessous
+
+## Création d'un Webform
+
+Pour créer un amont "un Webform" (globalement pour réaliser les questions demandées/informations à rentrer pour créer une fiche de cotation ou un PEI) aller dans : "Manage" -> "Structure" -> "Webforms" -> "+ Add webform" -> NOM-DU-WEBFORM-CRÉÉ -> "Save".
+
+Après avoir sauvegarder le Webform créé, il faut créer un contenu de la forme du Webform créé ("Manage" -> "Content" -> "+Add content" -> "Webform" -> (rentrer le titre du questionnaire voulu), et bien sélectionner : "Webform" -> "NOM-DU-WEBFORM-CRÉÉ")
+
+Le contenu du Webform a été créé (retrouvable dans "Content" -> "NOM-DU-WEBFORM-CRÉÉ"). Pour le modifier/ajouter des questions/du contenu au questionnaire, cliquer sur le pinceau correspondant au contenu -> "Build".
+
+Voici un aperçu des types de questions qu'il est possible d'ajouter, jugé pour le moment les plus pertinentes.
+
+(Éléments puis Aperçus) :
+
+Exemple 1 :
+
+![](Images%20README/2.PNG)
+![](Images%20README/3.PNG)
+
+Exemple 2 :
+
+![](Images%20README/4.PNG)
+![](Images%20README/5.PNG)
+
+Exemple 3 (APRTICULIEREMENT LE DERNIER):
+
+![](Images%20README/6.PNG)
+![](Images%20README/7.PNG)
+
+## Ajouter des menus/raccourcis
+
+Dans la barre des menus, il n'y a pour le moment que menu qui n'emmène vers rien. On va donc ajouter des raccourcis à cette endroit afin d'accéder aux formulaires créés précédemment.
+
+![](Images%20README/8.PNG)
+
+Dans "Manage" -> "Structure" -> "Menus" -> "Main navigation : Edit Menu", on va pouvoir décocher "Home" (qui va plus nous embêter qu'autre chose), et surtout créer d'autres onglets raccourcis, qui pourront emmener vers un questionnaire créé au préalable.
+
+Après avoir sélectionner "Add a link", dans "Link" on va copier/coller le lien d'un questionnaire précédemment créé (lien trouvable dans "Manage" -> "Content" -> "NOM-DU-QUESTIONNAIRE-CRÉÉ") et dans "Menu link title" le nom de l'onglet qui sera affiché.
