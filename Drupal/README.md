@@ -88,3 +88,30 @@ Dans la barre des menus, il n'y a pour le moment que menu qui n'emmène vers rie
 Dans "Manage" -> "Structure" -> "Menus" -> "Main navigation : Edit Menu", on va pouvoir décocher "Home" (qui va plus nous embêter qu'autre chose), et surtout créer d'autres onglets raccourcis, qui pourront emmener vers un questionnaire créé au préalable.
 
 Après avoir sélectionner "Add a link", dans "Link" on va copier/coller le lien d'un questionnaire précédemment créé (lien trouvable dans "Manage" -> "Content" -> "NOM-DU-QUESTIONNAIRE-CRÉÉ") et dans "Menu link title" le nom de l'onglet qui sera affiché.
+
+## Version easyphp ---
+
+La mise en place du système a été effectuée sous EasyPHP - Devserver 17.0 (Windows).
+https://www.easyphp.org/
+
+Lors du lancement de l'application, un "dashboard" peut être ouvert depuis l'icône située dans la zone d'accès rapide de la barre des tâches. (http://127.0.0.1:1111/)
+Depuis la page ainsi ouverte dans le navigateur, est proposé une redirection vers le "warehouse", où se trouvent les différents modules assumés par EasyPHP ainsi que leurs versions.
+https://warehouse.easyphp.org/index.php?s=eds
+
+Versions :
+    - Apache : 2.4.25 (x86)
+    - PHP : 8.1.1 (x86)
+    - Mysql : 5.7.17 (x86)
+    - PhpMyAdmin : 5.1.3
+
+/!\ La version PhpMyAdmin a été importée manuellement depuis le site officiel :
+https://www.phpmyadmin.net/
+Une fois le dossier dézippé dans le dossier contenant les version PhpMyAdmin d'EasyPHP (ex : C:\Program Files (x86)\EasyPHP-Devserver-17\eds-modules), y ont été ajoutés le dossier tmp (?) ainsi que les fichiers config.inc et eds-module ont été ajoutés depuis une version précédente (5.1.1). La variable $module-version de ce dernier fichier a été modifiée ($module_version = '5.1.3';) afin de correspondre lors de l'affichage sous l'interface EasyPHP.
+
+Le Framework Drupal a été téléchargé depuis le site officiel (version developers, 9.3.12)
+https://www.drupal.org/download
+Le dossier dézippé a été placé dans un dossier vierge faisant office de Projet.
+
+Depuis l'interface (dashboard) d'EasyPHP, les serveurs HTTP et de base de données doivent être lancés (start). Le dossier de projet définit précédemment doit également être ajouté dans les dossiers de travail (add directory).
+Avant de lancer le site Drupal, il est nécessaire d'accéder à PhpMyAdmin (parmi les modules de l'interface) afin d'y créer une base de données qui doit rester vierge.
+Lors des opérations de mise en place du site, assurées par Drupal lorsque celui-ci est lancé pour la première fois, devront être renseignés la base de données ainsi qu'un utilisateur administrateur (par défaut : root) et son mot-de-passe (par défaut : laisser vide).
