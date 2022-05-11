@@ -133,6 +133,30 @@ Puis dans :
 
 Primary Menu mettre tous les différents menus et dans les autorisation selectionner le rôle qui correspond à son menu
 
+# Export des webform en format PDF
+
+Pour mettre en place l'export sous format PDF, il faut installer les modules suivants:
+- Entity print
+- Webform Entity Print
+
+Le bouton "Download PDF" est désormais affiché sous les submissions des Webform. Cependant, il faut installer DomPDF pour que cela fonctionne. Pour cela, on suit les étapes suivantes:
+
+- télécharger le zip de DomPDF à l'adresse https://github.com/dompdf/dompdf/releases
+- le dézipper dans le dossier "vendor" de telle sorte à ce que les fichiers soient dans C:\Bitnami\drupal-9.3.12-0\apps\drupal\htdocs\vendor\dompdf\dompdf
+- ouvrir le fichier autoload.php situé dans le dossier "vendor"
+- écrire les lignes suivantes avant la ligne return (la dernière ligne du fichier) et enregistrer:
+
+require_once __DIR__ . '/dompdf/dompdf/lib/html5lib/Parser.php';
+
+require_once __DIR__ . '/dompdf/dompdf/lib/php-font-lib/src/FontLib/
+Autoloader.php';
+
+require_once __DIR__ . '/dompdf/dompdf/lib/php-svg-lib/src/autoload.php';
+
+require_once __DIR__ . '/dompdf/dompdf/src/Autoloader.php';
+Dompdf\Autoloader::register();
+- vider les caches du site
+
 # Version easyphp ---
 
 La mise en place du système a été effectuée sous EasyPHP - Devserver 17.0 (Windows).

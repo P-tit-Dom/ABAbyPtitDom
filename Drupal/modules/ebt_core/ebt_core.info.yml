@@ -1,0 +1,16 @@
+type: module
+name: 'Extra Block Types (EBT): Core'
+description: 'Base module for EBT blocks.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Extra Block Types'
+
+dependencies:
+  - drupal:field_group
+  - drupal:media
+  - drupal:media_library_form_element
+
+# Information added by Drupal.org packaging script on 2022-02-11
+version: '1.3.3'
+project: 'ebt_core'
+datestamp: 1644584668

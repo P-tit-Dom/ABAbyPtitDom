@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * EBT Tabs module file.
+ */
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function ebt_basic_button_preprocess_block(&$variables) {
+  if (empty($variables['elements']['content']['#block_content']) ||
+    $variables['elements']['content']['#block_content']->bundle() !== 'ebt_basic_button') {
+    return;
+  }
+
+  $service = \Drupal::service('ebt_basic_button.generate_custom_css');
+  $ebt_settings = $variables['content']['#block_content']->field_ebt_settings->getValue();
+
+  if (!empty($variables['base_plugin_id']) && $variables['base_plugin_id'] == 'inline_block') {
+    $block_class = 'block-revision-id-' . $variables['configuration']['block_revision_id'];
+  }
+  else {
+    $block_class = str_replace(':', '', $variables['plugin_id']);
+    $block_class = str_replace('_', '-', $block_class);
+    $block_class = 'ebt-block-' . $block_class;
+  }
+
+  $variables['button_styles'] = $service->generateFromSettings($ebt_settings[0]['ebt_settings'], $block_class);
+}
