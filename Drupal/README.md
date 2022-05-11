@@ -80,6 +80,40 @@ Dans "Manage" -> "Structure" -> "Menus" -> "Main navigation : Edit Menu", on va 
 
 Après avoir sélectionner "Add a link", dans "Link" on va copier/coller le lien d'un questionnaire précédemment créé (lien trouvable dans "Manage" -> "Content" -> "NOM-DU-QUESTIONNAIRE-CRÉÉ") et dans "Menu link title" le nom de l'onglet qui sera affiché.
 
+# Bouton cliquable
+
+Pour ajouter un bouton cliquable, va falloir ajouter 5 modules :
+
+- EBT : Basic Button
+- EBT : Core
+- Paragraphs
+- Media Library Form Element
+- Field group
+
+Ensuite activer uniquement EBT : Basic Button, ça va activer tout seul tous les autres.
+
+Maintenant, pour mettre un bouton on va mettre un bloc "Custom bloc" -> Basic button, et suivre le mouvement.
+
+Pour mettre une image en fond de bouton, "Background Color" : écrire "None".
+
+Ensuite il faut télécharger une image (dans l'idéal avec fond transparent en PNG de max 100px x 100px)
+
+# Supprimer bouton orange en bas
+
+Aller à :
+
+    drupal/fr/admin/structure/views/view/frontpage/edit/feed_1
+
+Décocher "Page" à côté de "Attach"
+
+# Découper comme voulu une page
+
+En sélectionnant field builder, il faut ensuite cocher les 2 petits carrés en bas dans "Layout Option"
+
+    drupal/fr/admin/structure/types/manage/webform/display
+
+On va pouvoir régler comme on veut après dans la section Layout dans Webform.
+
 # Enlever "Submitted by..."
 
 Parce qu'on s'en fiche dans le cadre de ce site, c'est juste embettant d'avoir ça en permanence,
@@ -88,6 +122,16 @@ voir :
 localhost/drupal/fr/admin/structure/types/manage/webform 
 
 (si c'est aux werbform qu'on veut enlever ça), -> Display Settings : décocher
+
+# Menu variant selon le rôle
+
+Créer 2 menus différents dans "Menus"
+
+Puis dans :
+
+    drupal/fr/admin/structure/block
+
+Primary Menu mettre tous les différents menus et dans les autorisation selectionner le rôle qui correspond à son menu
 
 # Version easyphp ---
 
