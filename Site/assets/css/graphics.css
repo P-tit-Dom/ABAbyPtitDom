@@ -1,0 +1,91 @@
+header {
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+body {
+    background-color: #e9eacf;
+    overflow: hidden;
+}
+
+disposition_colonne {
+    justify-content: center;
+    margin: 10px 40px;
+    display:flex ;
+    flex-direction: column;
+    flex-flow: row ; 
+}
+
+.bouton_bleu a {
+    text-align: center;
+    padding: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    height: 100px;
+    width: 250px;
+    font-weight: none;
+    display: block;
+    color: rgb(250, 250, 250);
+    background-color: rgb(49, 111, 236);
+    border: 4px solid #003392;
+    border-radius: 10px 10px 10px 10px;
+    transition: background .2s ease-in-out;
+}
+
+    .bouton_bleu a:hover {
+      background-color: #0042bd;
+    }
+
+    .bouton_bleu {
+      padding: 2%;
+      margin-top: 70px; 
+      justify-content: center;
+      display:flex ;
+    }
+
+.bouton_vert a {
+    text-align: center;
+    padding: .4em;
+    text-decoration: none;
+    height: 40px;
+    width: 150px;
+    font-weight: none;
+    display: block;
+    color: rgb(250, 250, 250);
+    background-color: rgb(23, 160, 25);
+    border-radius: 5%;
+    transition: background .2s ease-in-out;
+}
+    
+    .bouton_vert a:hover {
+        background-color: rgb(17, 112, 18);
+}
+
+    .bouton_vert {
+        padding: 2%;
+        justify-content: center;
+        display:flex ;
+}
+
+.titre_page {
+    height: 100px;
+    width: 600px;
+    text-align: center;
+    color:white;
+    padding: 20px;
+    background-color: rgb(49, 111, 236);
+    border: 4px solid #003392;
+    border-radius: 10px 10px 10px 10px;
+}
+
+liste_acti_im {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0 20% 0 20%;
+    height: 25em;
+}
