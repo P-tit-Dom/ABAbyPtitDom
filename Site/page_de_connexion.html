@@ -8,14 +8,14 @@
     <title>
       Page de connexion
     </title>
-    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/graphics.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
       <header>
         <disposition_colonne>
             <a href><img src="assets/images/Logo.png" alt="Logo" class="haut"></a>
-            <h1 class="ABAbyPtitDom">ABA by Ptit Dom</h1>
+            <h1 class="titre_page">ABA by Ptit Dom</h1>
         </disposition_colonne>
       </header>
 
@@ -31,35 +31,14 @@
           <label class="id_mdp"">Mot de passe</label> : <input type="text" class="input_text"/>
         </form>
       </connexion>
-    </article>
+    </article>  
 
-      <p class="bouton_bleu"><a href>Se connecter</a></p>
+      <button class="bouton_vert" type="button">Se connecter</button>
 
 
   </body>
 
   <style>
-
-    .bouton_bleu a {
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    padding: .5em 1.25em;
-    font-weight: none;
-    color: rgb(250, 250, 250);
-    background-color: rgb(49, 111, 236);
-    border: 4px solid #003392;
-    border-radius: 10px 10px 10px 10px;
-    transition: background .2s ease-in-out;
-    }
-
-    .bouton_bleu a:hover {
-      background-color: #0042bd;
-    }
-
-    .bouton_bleu {
-      text-align: center;
-    }
 
     .id_mdp{
         font-weight: bold;
@@ -84,37 +63,12 @@
     }
 
     body{
-      background-color: #e9eacf;
       overflow-y: hidden; 
     }
 
     .haut {
       text-align: center;
       width: 40%;
-    }
-
-    .ABAbyPtitDom {
-      height: 100px;
-      width: 600px;
-      text-align: center;
-      color:white;
-      padding: 20px;
-      background-color: rgb(49, 111, 236);
-      border: 4px solid #003392;
-      border-radius: 10px 10px 10px 10px;
-    }
-
-    disposition_colonne {
-      justify-content: center;
-      margin: 10px 40px;
-      background-color: #e9eacf;
-      display:flex ;
-      flex-direction: column;
-      flex-flow: row ; 
-    }
-
-    header {
-      text-align: center;
     }
     
   </style>

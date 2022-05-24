@@ -7,8 +7,7 @@ h2 {
 }
 
 body {
-    background-color: #e9eacf;
-    overflow: hidden;
+    background-color: #e6e5d5;
 }
 
 disposition_colonne {
@@ -41,44 +40,43 @@ disposition_colonne {
 
     .bouton_bleu {
       padding: 2%;
-      margin-top: 70px; 
+      margin-top: 60px; 
       justify-content: center;
       display:flex ;
     }
-
-.bouton_vert a {
-    text-align: center;
+   
+.bouton_vert {
     padding: .4em;
-    text-decoration: none;
     height: 40px;
     width: 150px;
     font-weight: none;
     display: block;
+    margin: 3% auto;
     color: rgb(250, 250, 250);
     background-color: rgb(23, 160, 25);
-    border-radius: 5%;
+    border-radius: 10%;
     transition: background .2s ease-in-out;
 }
-    
-    .bouton_vert a:hover {
+    .bouton_vert:hover {
         background-color: rgb(17, 112, 18);
-}
+    }
 
-    .bouton_vert {
-        padding: 2%;
-        justify-content: center;
-        display:flex ;
-}
+    .bouton_vert:active {
+        background-color: rgb(23, 160, 25);
+        transition: background .0s ease-in-out;
+    }
 
 .titre_page {
-    height: 100px;
-    width: 600px;
+    height: 50px;
+    margin: 1%;
+    width: 650px;
     text-align: center;
+    text-shadow: 5%;
     color:white;
-    padding: 20px;
-    background-color: rgb(49, 111, 236);
-    border: 4px solid #003392;
-    border-radius: 10px 10px 10px 10px;
+    padding-bottom: 3.5%;
+    background-color: rgb(228, 202, 117);
+    border: 0.05em solid rgb(226, 156, 43);
+    border-radius: .15em;
 }
 
 liste_acti_im {

@@ -8,7 +8,7 @@
     <title>
       Profil
     </title>
-    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/graphics.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -17,7 +17,7 @@
         <a href><img src="assets/images/Profil.png" alt="Profil" class="Profil"></a>
         
         <disposition_colonne>
-            <div class="bouton"><a href>Choisir une image</a></div>
+            <button class="bouton_vert" type="button">Choisir une image</button>
             <a href><img src="assets/images/Cloud.png" alt="Profil" class="Cloud"></a>
         </disposition_colonne>
     </section>
@@ -52,7 +52,7 @@
 
             <label>Enfant</label> : <input type="text"/>
 
-            <p><div class="bouton2" class="save"><a href>Sauvegarder</a></div></p>
+            <button class="bouton_vert" type="button">Sauvegarder</button>
 
     </aside>
 
@@ -61,109 +61,74 @@
 
   <style>
 
-    .numero_de_telephone {
-        width: 34%;
-    }
+.bouton_vert {
+    margin-left: 25%;
+    margin-right: 5%;
+}
 
-    .text2 {
-        margin-left: 11%;
-    }
+.numero_de_telephone {
+    width: 34%;
+}
 
-    .date_de_naissance {
-        width: 50px;
-    }
-    
-    .ecart_cases2 {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
+.text2 {
+    margin-left: 11%;
+}
 
-    .ecart_cases {
-        margin-top: 50px;
-    }
+.date_de_naissance {
+    width: 50px;
+}
 
-    .espace {
-        margin-left: 150px;
-    }
+.ecart_cases2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
-    .taille_mail {
-        width: 585px;
-    }
+.ecart_cases {
+    margin-top: 50px;
+}
 
-    disposition_colonne2 {
-      align-items: center;
-      display: flex ;
-      flex-flow: row ;
-    }
+.espace {
+    margin-left: 150px;
+}
 
-    aside {
-        margin: 0px 0px 0px 150px;
-    }
+.taille_mail {
+    width: 585px;
+}
 
-    .bouton {
-        width: 150%;
-    }
+disposition_colonne2 {
+    align-items: center;
+    display: flex ;
+    flex-flow: row ;
+}
 
-    .bouton a {
-    text-align: center;
-    text-decoration: none;
-    padding: .5em 1.25em;
-    font-weight: none;
-    color: rgb(0, 0, 0);
-    background-color: rgb(225, 223, 223);
-    border: 2px solid #000000;
-    border-radius: 4px;
-    transition: background .2s ease-in-out;
-    }
+aside {
+    margin-left: 10%;
+}
 
-    .bouton2 {
-        margin-left: 500px;
-    }
+body {
+overflow-y: hidden;
+align-items: center;
+display:flex ;
+flex-flow: row ; 
+}
 
-    .bouton2 a {
-    text-align: center;
-    text-decoration: none;
-    padding: .5em 1.25em;
-    font-weight: none;
-    color: rgb(0, 0, 0);
-    background-color: rgb(225, 223, 223);
-    border: 2px solid #000000;
-    border-radius: 4px;
-    transition: background .2s ease-in-out;
-    }
+section {
+    width: 30%;
+}
 
-    disposition_colonne {
-      margin-left: 120px;
-      align-items: center;
-      display: flex ;
-      flex-flow: row ; 
-    }
+.Cloud {
+    width: 45%;
+}
 
-      body {
-        background-color: #e9eacf;
-        overflow-y: hidden;
-        align-items: center;
-        display:flex ;
-        flex-flow: row ; 
-      }
+.Home {
+    width: 15%;
+    margin: 5%;
+}
 
-      section {
-          width: 30%;
-      }
-
-      .Cloud {
-          width: 20%;
-      }
-
-      .Home {
-          width: 70px;
-          margin: 30px;
-      }
-
-      .Profil {
-          width: 70%;
-          margin: 70px;
-      }
+.Profil {
+    width: 70%;
+    margin: 15%;
+}
 
 
   </style>
