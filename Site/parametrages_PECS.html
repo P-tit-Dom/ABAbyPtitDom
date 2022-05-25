@@ -24,17 +24,19 @@
                     <button class="bouton_vert" type="button">Ajouter activité</button>
                 </form>
                 <liste_acti_im>
-                    <h class="fond">Jouer</h>
-                    <h class="fond">Dormir</h>
-                    <h class="fond">Sauter</h>
-                    <h class="fond">Chanter</h>
-                    <h class="fond">Renifler</h>
-                    <h class="fond">Inspirer - Expirer</h>
+                    <element> 
+                        <h class="mot">Jouer</h>
+                        <h button class="mot" type="button"><img src="assets/images/Supprimer_pxl.png "></button></h>
+                    </element>                 
+                    <element>  
+                        <h class="mot">Dormir</h>
+                        <h button class="mot" type="button"><img src="assets/images/Supprimer_pxl.png "></button></h>
+                    </element>
                 </liste_acti_im>
                 <disposition_colonne>
-                    <a href><img src="assets/images/fleche_gauche.png" alt="Profil" class="f_g"></a>
+                    <h button type="button"><img src="assets/images/fleche_gauche.png" alt="Profil" class="f_g"></h>
                     <h class="pages">Page 1</h>
-                    <a href><img src="assets/images/fleche_droite.png" alt="Profil" class="f_d"></a>
+                    <h button type="button"><img src="assets/images/fleche_droite.png" alt="Profil" class="f_d"></h>
                 </disposition_colonne>
             </ajout_activite>
 
@@ -45,23 +47,33 @@
                     <button class="bouton_vert" type="button">Ajouter image</button>
                 </form> 
                 <liste_acti_im>
-                    <h class="fond">La montgolfière chez l'ophtalmo</h>
-                    <h class="fond">La page d'accueil windows genre la prairie là</h>
+                    <element>
+                        <h class="mot">La montgolfière chez l'ophtalmo</h>
+                        <h button class="mot" type="button"><img src="assets/images/Supprimer_pxl.png "></button></h>
+                    </element>
+                    <element>
+                        <h class="mot">La page d'accueil windows</h>
+                        <h button class="mot" type="button"><img src="assets/images/Supprimer_pxl.png "></button></h>
+                    </element>
                 </liste_acti_im>
                 <disposition_colonne>
-                    <a href><img src="assets/images/fleche_gauche.png" alt="Profil" class="f_g"></a>
+                    <h button type="button"><img src="assets/images/fleche_gauche.png" alt="Profil" class="f_g"></h>
                     <h class="pages">Page 1</h>
-                    <a href><img src="assets/images/fleche_droite.png" alt="Profil" class="f_d"></a>
+                    <h button type="button"><img src="assets/images/fleche_droite.png" alt="Profil" class="f_d"></h>
             </ajout_image>
         </disposition_colonne>
     </body>
 
 <style>
+.mot {
+    margin: 0 2%;
+}
 
-.fond {
+element {
     border: 1px solid black;
     background-color:rgb(234, 234, 234);
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
 }
 
 .pages {
@@ -87,6 +99,7 @@ liste_acti_im {
     border: 1px solid black;
     margin: 0 20% 0 20%;
     height: 25em;
+    max-height: 60vh;
 }
 
 .espace {
@@ -119,6 +132,7 @@ ajout_image {
     margin-top: 2%;
     text-align: center;
 }
+
 
 </style>
 
