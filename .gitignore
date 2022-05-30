@@ -65,3 +65,10 @@
 .vs/
 .vscode/
 .idea/
+
+# MVC files
+/ptitdom_MVC/.htaccess
+/ptitdom_MVC/index.php
+/ptitdom_MVC/models/*
+/ptitdom_MVC/controllers/*
+/ptitdom_MVC/app/*
