@@ -43,8 +43,34 @@ disposition_colonne {
       padding: 2%;
       margin-top: 60px; 
       justify-content: center;
-      display:flex ;
+      display:flex;
     }
+
+    .bouton_bleu_long a {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: bold;
+        width: 750px;
+        font-weight: none;
+        color: rgb(250, 250, 250);
+        background-color: rgb(116, 154, 229);
+        border: 2px solid #426dbe;
+        border-radius: 15px;
+        transition: background .2s ease-in-out;
+    }
+    
+        .bouton_bleu_long a:hover {
+          background-color: #426dbe;
+        }
+    
+        .bouton_bleu_long {
+          margin-top: 1%; 
+          justify-content: center;
+          display:flex ;
+        }
    
 .bouton_vert {
     padding: .4em;
