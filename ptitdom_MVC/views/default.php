@@ -30,7 +30,7 @@
                     <td>
                         <?php if (isset($_SESSION['username'])) { ?>
                             <form action="" method="post">
-                                <button name="disconnection">Déconnexion</button>
+                                <button name="disconnection"><img src="assets/img/Exit.png"></button>
                             </form>
                         <?php } ?>
                     </td>
@@ -51,20 +51,27 @@
 
         <main role="main">            
             <?php if (isset($_SESSION['username'])) { ?>
-                <form action="Apprenant" method="get">
-                    <!-- think about the placeholder if a child has been selected -->
-                    <label for="learner">Sélection d'un apprenant :</label>
-                    <select id="learner" name="id">
-                        <?php
-                        echo 'theres sth';
-                        foreach($aps as $a) {
-                            echo '<option value="'.$a['id'].'">'.$a['nom'].'</option>';
-                        }
-                        ?>
-                    </select>
-                    <button>send</button>
-                </form>
-                <p>(should become a text input)</p>
+                <table class="choose-intervenant">
+                    <tr>
+                        <td>
+                            <form id="choose" action="Apprenant" method="get">
+                                <!-- think about the placeholder if a child has been selected -->
+                                <label for="learner">Sélection d'un apprenant :</label>
+                                <select id="learner" name="id">
+                                    <?php
+                                    echo 'theres sth';
+                                    foreach($aps as $a) {
+                                        echo '<option value="'.$a['id'].'">'.$a['nom'].'</option>';
+                                    }
+                                    ?>
+                                </select>
+                            </form>
+                        </td>
+                        <td>
+                            <button form="choose" id="choose-intervenant" class="green-button">Afficher page de l'apprenant</button>
+                        </td>
+                    </tr>
+                </table>
             <?php } ?>
             <?= $content ?>
         </main>
