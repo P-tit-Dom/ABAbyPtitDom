@@ -1,6 +1,3 @@
 [submodule "Prototype"]
 	path = Prototype
 	url = https://github.com/P-tit-Dom/Prototype
-[submodule "Drupal/Database"]
-	path = Drupal/Database
-	url = https://github.com/P-tit-Dom/Database-Skeleton.git
