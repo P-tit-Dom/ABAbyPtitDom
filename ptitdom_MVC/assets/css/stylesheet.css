@@ -237,3 +237,13 @@ form input {
 .img-button:hover {
     cursor:pointer ;
 }
+
+/* Evaluation journalière */
+
+.commentaire_cotation {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: .1em;
+    width: 10em;
+    height: 2em;
+}

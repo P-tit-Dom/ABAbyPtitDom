@@ -32,7 +32,7 @@ print_five_times();
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- Theme styles -->
-        <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style-sheet.css">
         <script type="text/javascript" src="scripts/functions.js"></script>
 </head>
 
@@ -297,4 +297,85 @@ print_five_times();
             </td>
         </tr>
     </table>
+
+    <!-- Evaluation journalière -->
+
+    <h1>Evaluation journalière</h1>
+
+    <table class="screen-part">
+        <tr>
+            <td>
+                <button type="button"><img src="assets/img/home.png"></button>
+            </td>
+            <td>
+                Date : 9/04/2022 - <br>
+                Apprenant :
+            </td>
+            <td class="zone_com-cota">
+                <button class="bouton-cotation green-button" type="button">Commentaire fiche de cotation</button>
+                <div class="commentaire_cotation">
+                    Franchement ça s'est bien passé de ouf
+                </div>
+            </td>
+        </tr> 
+    </table>
+
+    <div class="comportement">
+        <table>
+            <tr>
+                <td>
+                    <button class="bouton_comportement_1" type="button">Comportements</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comportement 1 :
+                    <button class="bouton-plus-moins bouton-plus" type="button">+</button><br>
+                    <div class="zero">
+                        0
+                    </div>
+                    <button class="bouton-plus-moins bouton-moins" type="button">-</button>
+                </td>
+            </tr>
+            <tr class="delimitation_comportement">
+                <td>
+                    Comportement 2 :<br>
+                    <div class="zero">
+                        0
+                    </div>
+                    <button class="bouton_comportement_2" type="button">Lancer timer</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comportement 3 :<br>
+                    <button class="bouton-plus-moins bouton-plus" type="button">+</button><br>
+                    <div class="zero">
+                        0
+                    </div>
+                    <button class="bouton-plus-moins bouton-moins" type="button">-</button>
+                    <div class="zero">
+                        0
+                    </div>
+                    <button class="bouton_comportement_2" type="button">Lancer timer</button>
+                </td>
+            </tr>
+            <tr class="delimitation_comportement">
+                <td>
+                    <button class="bouton_comportement_3" type="button">Réintroduire comportement</button>
+                </td>
+            </tr>
+            <tr class="delimitation_comportement">
+                <td>
+                    <button class="bouton_comportement_3" type="button">Ajouter comportement</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="bouton_comportement_1" type="button">Fiche de maintien</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
 </body>
