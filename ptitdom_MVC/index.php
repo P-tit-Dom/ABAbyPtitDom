@@ -21,6 +21,7 @@ else {
     if (isset($_POST['disconnection'])) {
         unset($_SESSION['username']);
         unset($_SESSION['password']);
+        unset($_SESSION['role']);
         
         require_once(ROOT.'controllers/Main.php');
         $controller = new Main();
@@ -32,14 +33,14 @@ else {
         $params = explode('/', $_GET['p']); // url parameters
         if($params[0] != "" && file_exists(ROOT.'controllers/'.$params[0].'.php')) {
             $controller = $params[0]; // knowing which controller to call
-            $action = "index"; // function called as default
+            //$action = "index"; // function called as default
 
             // identifying potential parameters to be sent
             $para = isset($params[1]) ? $params[1] : null; // if statement; often used in javascript, permitted in php
             require_once(ROOT.'controllers/'.$controller.'.php');
             $controller = new $controller();
-            if(method_exists($controller, $action)) {
-                $controller->$action($para);
+            if(method_exists($controller, 'index'/*$action*/)) {
+                $controller->index/*$action*/($_SESSION['username'], $_SESSION['password'], $para);
             }
             else { // if the dedicated controller doesn't hold an index function
                 http_response_code(404);

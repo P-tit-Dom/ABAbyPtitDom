@@ -2,8 +2,6 @@
 abstract class Model{
     private $host = "localhost";
     private $db_name = "garrat";
-    //private $username = ""; // root
-    //private $password = "";
     
     public $error = FALSE;
     

@@ -1,3 +1,7 @@
+<?php
+$root = "/edsa-ptitdom_MVC"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,22 +10,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- Theme styles -->
-        <link rel="stylesheet" type="text/css" href="assets/css/ss2.css">
-        <script type="text/javascript" src="scripts/functions.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?= $root ?>/assets/css/ss2.css">
+        <script type="text/javascript" src="<?= $root ?>/scripts/functions.js"></script>
     </head>
 
     <body>
+        <?php
+        $path = explode('/', $_GET['p'])[0];
+        if($path != "Seance") {
+        ?>
         <header>
             <!-- display header unless in cotation ? -->
             <table class="header">
                 <tr>
                     <td>
-                        <a href="/edsa-ptitdom_MVC">
-                            <img src="assets/img/Logo.png" alt="Logo" class="logo">
+                        <a href="<?= $root ?>">
+                            <img src="<?= $root ?>/assets/img/Logo.png" alt="Logo" class="logo">
                         </a>
                     </td>
                     <td>
-                        <a href="/edsa-ptitdom_MVC">
+                        <a href="<?= $root ?>">
                             <button class="h1">
                                 <h1>ABA by P'tit Dom</h1>
                             </button>
@@ -30,7 +38,7 @@
                     <td>
                         <?php if (isset($_SESSION['username'])) { ?>
                             <form action="" method="post">
-                                <button name="disconnection"><img src="assets/img/Exit.png"></button>
+                                <button name="disconnection"><img src="assets/img/Exit.png" alt="Déconnexion"></button>
                             </form>
                         <?php } ?>
                     </td>
@@ -39,7 +47,7 @@
 
             <?php if (isset($_SESSION['username'])) { ?>
                 <div>
-                    <a href="/edsa-ptitdom_MVC"><button type="button">Psychologue</button></a>
+                    <a href="<?= $root ?>"><button type="button">Psychologue</button></a>  <!-- based on role (session) -->
                     <?php foreach(explode('/', $_GET['p']) as $p) {
                         if ($p != "") {
                             echo " > ".$p;
@@ -48,36 +56,29 @@
                 </div>
             <?php } ?>
         </header>
+        <?php } # end path!=Seance ?>
 
-        <main role="main">            
-            <?php if (isset($_SESSION['username'])) { ?>
-                <table class="choose-intervenant">
-                    <tr>
-                        <td>
-                            <form id="choose" action="Apprenant" method="get">
-                                <!-- think about the placeholder if a child has been selected -->
-                                <label for="learner">Sélection d'un apprenant :</label>
-                                <select id="learner" name="id">
-                                    <?php
-                                    echo 'theres sth';
-                                    foreach($aps as $a) {
-                                        echo '<option value="'.$a['id'].'">'.$a['nom'].'</option>';
-                                    }
-                                    ?>
-                                </select>
-                            </form>
-                        </td>
-                        <td>
-                            <button form="choose" id="choose-intervenant" class="green-button">Afficher page de l'apprenant</button>
-                        </td>
-                    </tr>
-                </table>
+        <main role="main">
+            <?php if (isset($_SESSION['username']) && ($path == "" || $path == "Apprenant")) { ?>
+                <label for="learner">Sélection d'un apprenant :</label>
+                <select id="learner"> <!--  onchange="update_action(this)" -->
+                    <?php
+                    foreach($aps as $a) {
+                        echo '<option value="'.$a['id'].'"';
+                        if (isset($ap['id']) && $ap['id'] == $a['id']) { // ---------------- $ap being the current learner -------------------------------------------------------------------------------------------- //
+                            echo ' selected';
+                        }
+                        echo '>'.$a['nom'].'</option>';
+                    }
+                    ?>
+                </select>
+                <a href="<?= $root ?>" onclick="this.href='<?= $root ?>/Apprenant/'+this.previousElementSibling.value"><button>send</button></a>
             <?php } ?>
             <?= $content ?>
         </main>
 
         <footer>
         </footer>
-        <script type="text/javascript" src="scripts/js.js"></script>
+        <script type="text/javascript" src="<?= $root ?>/scripts/js.js"></script>
     </body>
 </html>

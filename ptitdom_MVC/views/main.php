@@ -7,7 +7,7 @@
                     <div>
                         Apprenant : enfant 1 <br>
                         Salle : Salle Violette <br>
-                        Site : La Monjou
+                        Site : La Monjous
                     </div>
                 </a>
             </td>
@@ -16,7 +16,7 @@
                     <div>
                         Apprenant : enfant 2 <br>
                         Salle : Salle Rose <br>
-                        Site : La Monjou
+                        Site : La Monjous
                     </div>
                 </a>
             </td>
@@ -34,10 +34,11 @@
             </td>
         </tr>
     </table>
+    <!-- psy only -->
     <h2>--- Accès ---</h2>
     <div class="access">
-        <a href=""><button class="">Objectifs</button></a>
-        <a href=""><button class="">PECS / Chaînage</button></a>
-        <a href=""><button class="">Gestion des utilisateurs</button></a>
+        <a href="Objectifs"><button>Objectifs</button></a>
+        <a href="PECS_Chains"><button>PECS / Chaînages</button></a>
+        <a href="Membres"><button>Apprenants / Intervenants</button></a>
     </div>
 </div>
