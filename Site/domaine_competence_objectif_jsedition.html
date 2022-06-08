@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <meta charset="utf-8" />
+        <title>
+            Graphics
+        </title>
+    </head>
+
+    <body>
+        <disposition_colonne>
+            <table>
+                <tr>
+                    <th class="entete">Domaines</th>
+                    <th class="entete">Compétences</th>
+                    <th class="entete">Objectifs</th>
+                </tr>
+               
+                <tr>
+                    <td>                        
+                        <input type="text" placeholder="Saisir domaine à ajouter" id="saisie_domaine">
+                        <button class="bouton_vert" type="button" onclick="ajouterDomaine()">Ajouter domaine</button>
+                        <div class='liste_im' style="overflow:hidden">
+                            <div style="position:relative;top:0px" id="listeDomaines">
+                                <div tabindex="0" button type="button" onclick="selectDomaine(this)" class="ligne"> 
+                                    <p class="mot">Domaine 1</p>
+                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></button></p>
+                                </div>                 
+                                <div tabindex="0" button type="button" onclick="selectDomaine(this)" class="ligne">  
+                                    <p class="mot">Domaine 2</p>
+                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></button></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="disposition_colonne">
+                            <p button type="button" onclick="previousPage(this)"><img src="assets/images/fleche_gauche.png" alt="Profil" class="f_g"></p>
+                            <p class="pages" id="pageDisplay1">Page 1</p>
+                            <p button type="button" onclick="nextPage(this)"><img src="assets/images/fleche_droite.png" alt="Profil" class="f_d"></p>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Saisir compétence à ajouter" id="saisie_competence">
+                        <button class="bouton_vert" type="button" onclick="ajouterCompetence()">Ajouter compétence</button>
+                    <div class='liste_im' style="overflow:hidden" id="listeCompetences">
+                        <div style="position:relative;top:0px">
+                            <div>
+                                <div tabindex="0" button onclick="selectCompetence(this)" type="button" class="ligne">  
+                                    <p class="mot">Compétence 1.1</p>
+                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                </div>                 
+                                <div tabindex="0" button onclick="selectCompetence(this)" type="button"  class="ligne">    
+                                    <p class="mot">Compétence 1.2</p>
+                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                </div>
+                                <div tabindex="0" button onclick="selectCompetence(this)" type="button" class="ligne">    
+                                    <p class="mot">Compétence 1.3</p>
+                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                </div>
+                            </div>
+                            <div class="hidden">
+                                <div tabindex="0" button onclick="selectCompetence(this)" type="button" class="ligne">  
+                                    <p class="mot">Compétence 2.1</p>
+                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                </div>                 
+                                <div tabindex="0" button onclick="selectCompetence(this)" type="button"  class="ligne">    
+                                    <p class="mot">Compétence 2.2</p>
+                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                </div>
+                                <div tabindex="0" button onclick="selectCompetence(this)" type="button" class="ligne">    
+                                    <p class="mot">Compétence 2.3</p>
+                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="disposition_colonne">
+                        <p button type="button" onclick="previousPage(this)"><img src="assets/images/fleche_gauche.png" alt="Profil" class="f_g"></p>
+                        <p class="pages">Page 1</p>
+                        <p button type="button" onclick="nextPage(this)"><img src="assets/images/fleche_droite.png" alt="Profil" class="f_d"></p>    
+                    </div>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Saisir objectif à ajouter">
+                        <button class="bouton_vert" type="button">Ajouter objectif</button>
+                        <div class='liste_im' style="overflow:hidden" id="listeObjectifs">
+                            <div style="position:relative;top:0px">
+                                <div>
+                                    <div>
+                                        <div class="ligne">  
+                                            <p class="mot">Objectif 1.1.1</p>
+                                            <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                        </div>   
+                                        <div class="ligne">  
+                                            <p class="mot">Objectif 1.1.2</p>
+                                            <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                        </div> 
+                                    </div>  
+                                    <div class="hidden">
+                                        <div class="ligne">  
+                                            <p class="mot">Objectif 1.2.1</p>
+                                            <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                        </div>   
+                                        <div class="ligne">  
+                                            <p class="mot">Objectif 1.2.2</p>
+                                            <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                        </div>  
+                                    </div>  
+                                </div>  
+                                <div>
+                                    <div class="hidden">
+                                        <div class="ligne">  
+                                            <p class="mot">Objectif 2.1.1</p>
+                                            <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                        </div>   
+                                        <div class="ligne">  
+                                            <p class="mot">Objectif 2.1.2</p>
+                                            <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                        </div> 
+                                    </div>  
+                                    <div class="hidden">
+                                        <div class="ligne">  
+                                            <p class="mot">Objectif 2.2.1</p>
+                                            <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                        </div>   
+                                        <div class="ligne">  
+                                            <p class="mot">Objectif 2.2.2</p>
+                                            <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>
+                                        </div>  
+                                    </div>  
+                                </div> 
+                            </div>        
+                        </div>
+                        <div class="disposition_colonne">
+                            <p button type="button" onclick="previousPage(this)"><img src="assets/images/fleche_gauche.png" alt="Profil" class="f_g"></p>
+                            <p class="pages">Page 1</p>
+                            <p button type="button" onclick="nextPage(this)"><img src="assets/images/fleche_droite.png" alt="Profil" class="f_d"></p> 
+                        </div>  
+                    </td>
+                </tr>
+            </table>
+        </disposition_colonne>
+    </body>
+
+    <style>
+        td, th{
+            text-align: center;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+        }
+
+        .entete {
+            font-size: 200%;
+        }
+
+        .ligne {
+            border: 1px solid black;
+            background-color:rgb(234, 234, 234);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ligne:focus {
+            background-color: rgb(180,180,180);
+        }
+    
+        .select {
+            margin-bottom: 2%;
+        }
+    
+        .pages {
+            margin-top: 2%;
+            width: 50%;
+        }
+    
+        fleche_retour {
+            width: 20%;
+        }
+    
+        .retour {
+            width: 70%;
+        }
+    
+        .mot {
+        margin: 0 2%;
+        }
+    
+        .liste_im {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border: 1px solid black;
+        margin: 0 20% 0 20%;
+        height: 26em;
+        max-height: 55vh;
+        }
+    
+        .f_d {
+        margin-right: 50%;
+        width: 30%  ;
+        }
+    
+        .f_g  {
+        margin-left: 50%;
+        width: 30%;
+        }
+    
+        .hidden {
+            display: none;
+        }
+
+        header {
+            text-align: center;
+        }   
+
+        h2 {
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #e6e5d5;
+        }
+
+    .disposition_colonne {
+        justify-content: center;
+        margin: 10px 40px;
+        display:flex ;
+        flex-direction: column;
+        flex-flow: row ; 
+    }
+
+    .bouton_bleu a {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        width: 250px;
+        font-weight: none;
+        color: rgb(250, 250, 250);
+        background-color: rgb(116, 154, 229);
+        border: 2px solid #426dbe;
+        border-radius: 15px;
+        transition: background .2s ease-in-out;
+    }
+
+    .bouton_bleu a:hover {
+      background-color: #426dbe;
+    }
+
+    .bouton_bleu {
+      padding: 2%;
+      margin-top: 60px; 
+      justify-content: center;
+      display:flex ;
+    }
+   
+    .bouton_vert {
+        padding: .4em;
+        height: 40px;
+        width: 160px;
+        font-weight: none;
+        display: block;
+        margin: 3% auto;
+        color: rgb(250, 250, 250);
+        background-color: rgb(23, 160, 25);
+        border-radius: 10px;
+        transition: background .2s ease-in-out;
+    }
+
+    .bouton_vert:hover {
+        background-color: rgb(17, 112, 18);
+    }
+
+    .bouton_vert:active {
+        background-color: rgb(23, 160, 25);
+        transition: background .0s ease-in-out;
+    }
+
+.titre_page {
+        height: 50px;
+        margin: 1%;
+        width: 650px;
+        text-align: center;
+        text-shadow: 5%;
+        color:white;
+        padding-bottom: 3.5%;
+        background-color: rgb(228, 202, 117);
+        border: 0.05em solid rgb(226, 156, 43);
+        border-radius: .15em;
+    }
+        </style> 
+
+        <script>
+            function ajouterDomaine() {
+    var listeDomaines = document.getElementById("listeDomaines");
+    var domaine=document.getElementById("saisie_domaine").value.trim();
+    if (domaine=='') {
+        ;
+    } 
+    else {
+        listeDomaines.innerHTML+='<div tabindex="0" button type="button" onclick="selectDomaine(this)" class="ligne">                                      <p class="mot">'+domaine+'</p>                                    <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></button></p>                                </div>';
+    }
+}
+
+function ajouterCompetence() {
+    var listeCompetences = document.getElementById("listeCompetences");
+    var competence=document.getElementById("saisie_competence").value.trim();
+    visible=''
+    if (competence=='') {
+        ;
+    } 
+    else {
+        for (i of listeCompetences.children) {
+            if (i.classList.contains("hidden")) {;}
+            else {
+                visible=i
+            }
+        }
+        console.log(visible)
+        if (visible=='') {
+            listeCompetences.innerHTML+='<div> </div>'
+            visible=listeCompetences.lastElementChild
+        }
+        visible.innerHTML+='<div tabindex="0" button onclick="selectCompetence(this)" type="button" class="ligne">                                  <p class="mot">'+competence+'</p>                                <p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></p>                            </div> ';
+    }
+}
+
+function ajouterImage() {
+    var listeImages = document.getElementById("div_im");
+    var image=document.getElementById("saisie_image").value.trim();
+    if (image=='') {
+        ;
+    } 
+    else {
+        listeImages.innerHTML+='<div class="ligne">  <p class="mot">'+image+'</p><p button class="mot" type="button" onclick="suppress(this)"><img src="assets/images/Supprimer_pxl.png "></button></p></div>';;
+    }
+}
+
+function nextPage(fleche) {
+    var liste = fleche.parentElement.previousElementSibling.children[0];
+    var pageHeight = getComputedStyle(liste.parentElement).height;
+    var count = liste.children.length;
+    pageCount=parseInt(count/15)+1 ;
+    var display=fleche.previousElementSibling.innerHTML;
+    pageNumber=display.slice(-1) ;
+    if (pageNumber==pageCount) {
+        fleche.previousElementSibling.innerHTML='Page 1';
+        var pageTop = getComputedStyle(liste).top;
+        liste.style.top=parseInt(pageTop.slice(0,-2)) + (pageCount-1)*(parseInt(pageHeight.slice(0,-2))) + "px";
+    }
+    else {
+        fleche.previousElementSibling.innerHTML='Page '+(parseInt(pageNumber)+1);
+        var pageTop = getComputedStyle(liste).top;
+        liste.style.top=parseInt(pageTop.slice(0,-2)) - parseInt(pageHeight.slice(0,-2)) + "px";
+    }
+}
+
+function previousPage(fleche) {
+    var liste = fleche.parentElement.previousElementSibling.children[0];
+    var pageHeight = getComputedStyle(liste.parentElement).height;
+    var count = liste.children.length;
+    pageCount=parseInt(count/15)+1 ;
+    var display=fleche.nextElementSibling.innerHTML;
+    pageNumber=display.slice(-1) ;
+    if (pageNumber=='1') {
+        fleche.nextElementSibling.innerHTML='Page '+pageCount;
+        var pageTop = getComputedStyle(liste).top;
+        liste.style.top=parseInt(pageTop.slice(0,-2)) + (pageCount-1)*(-parseInt(pageHeight.slice(0,-2))) + "px";
+    }
+    else {
+        fleche.nextElementSibling.innerHTML='Page '+(parseInt(pageNumber)-1);
+        var pageTop = getComputedStyle(liste).top;
+        liste.style.top=parseInt(pageTop.slice(0,-2)) + parseInt(pageHeight.slice(0,-2)) + "px";
+    }
+}
+
+function suppress(bouton) {
+    var ligne=bouton.parentElement;
+    var liste = bouton.parentElement.parentElement;
+    liste.removeChild(ligne);
+}
+
+function selectCompetence(ligne) {
+    comp=ligne.parentElement;
+    dom=comp.parentElement;
+    compIndex=Array.from(comp.children).indexOf(ligne);
+    domIndex=Array.from(dom.children).indexOf(comp);
+    listeObjectifs=document.getElementById("listeObjectifs").children[0];
+    for (i of listeObjectifs.children[domIndex].children) {
+        i.classList.add("hidden");
+    }
+    listeObjectifs.children[domIndex].children[compIndex].classList.remove("hidden")    
+}
+
+function selectDomaine(dom) {
+    listeDoms=dom.parentElement;
+    domIndex=Array.from(listeDoms.children).indexOf(dom);
+    listeCompetences=document.getElementById("listeCompetences").children[0];
+    for (i of listeCompetences.children) {
+        i.classList.add("hidden");
+    }
+    if (listeCompetences.children[domIndex]!=undefined) {
+        listeCompetences.children[domIndex].classList.remove("hidden");  
+    }
+    listeObjectifs=document.getElementById("listeObjectifs").children[0];
+    for (i of listeObjectifs.children) {
+        i.classList.add("hidden");
+    }
+    listeObjectifs.children[domIndex].classList.remove("hidden")
+    for (i of listeObjectifs.children[domIndex].children) {
+        i.classList.add("hidden");
+    }
+    listeObjectifs.children[domIndex].children[0].classList.remove("hidden")
+}
+        </script>
+</html>
