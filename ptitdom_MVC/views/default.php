@@ -10,7 +10,7 @@ $root = "/edsa-ptitdom_MVC"
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- Theme styles -->
-        <link rel="stylesheet" type="text/css" href="<?= $root ?>/assets/css/ss2.css">
+        <link rel="stylesheet" type="text/css" href="<?= $root ?>/assets/css/content2.css">
         <script type="text/javascript" src="<?= $root ?>/scripts/functions.js"></script>
     </head>
 

@@ -36,8 +36,7 @@
             </tr>
         </table>
         <interface>
-            <div class="bouton_bleu_long"><a href>Définir Domaines / Objectifs / Compétences par défaut</a></div>
-            <div class="bouton_bleu_long"><a href>Définir Cibles par défaut</a></div>
+            <div class="bouton_bleu_long"><a href>Définir Domaines / Objectifs / Compétences par défaut</a></div>   
             <div class="bouton_bleu_long"><a href>Banque d'images du PECS et nouveaux chainages</a></div>
             <div class="bouton_bleu_long"><a href>Gestion des utilisateurs du site</a></div>
             <h2 class="evaluation_du_jour">
@@ -69,14 +68,79 @@
     </body>
 
 <style>
+ 
+body {
+    background-color: #e6e5d5;
+} 
+
+.titre_page {
+    height: 50px;
+    margin: 1%;
+    width: 650px;
+    text-align: center;
+    text-shadow: 5%;
+    color:white;
+    padding-bottom: 3.5%;
+    background-color: rgb(228, 202, 117);
+    border: 0.05em solid rgb(226, 156, 43);
+    border-radius: .15em;
+}
+
 .bouton_bleu a {
     height: 50px;
     width: 350px;
 }
 
-.bouton_bleu {
-    margin-top: 40px;
+    .bouton_bleu {
+        margin-top: 40px;
+    }
+
+.bouton_vert {
+    padding: .4em;
+    height: 40px;
+    width: 160px;
+    font-weight: none;
+    display: block;
+    margin: 3% auto;
+    color: rgb(250, 250, 250);
+    background-color: rgb(23, 160, 25);
+    border-radius: 10px;
+    transition: background .2s ease-in-out;
 }
+    .bouton_vert:hover {
+        background-color: rgb(17, 112, 18);
+    }
+
+    .bouton_vert:active {
+        background-color: rgb(23, 160, 25);
+        transition: background .0s ease-in-out;
+    }
+
+.bouton_bleu_long a {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: bold;
+        width: 750px;
+        font-weight: none;
+        color: rgb(250, 250, 250);
+        background-color: rgb(116, 154, 229);
+        border: 2px solid #426dbe;
+        border-radius: 15px;
+        transition: background .2s ease-in-out;
+}
+
+    .bouton_bleu_long a:hover {
+        background-color: #426dbe;
+    }
+
+    .bouton_bleu_long {
+        margin-top: 1%; 
+        justify-content: center;
+        display:flex ;
+    }
 
 .evaluation_du_jour {
     color: white;

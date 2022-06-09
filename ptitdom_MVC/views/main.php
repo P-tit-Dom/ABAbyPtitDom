@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="assets/css/content2.css">
+<script type="text/javascript" src="<?= $root ?>/scripts/functions.js"></script>
+
 <div class="middle_sixty">
     <h2>Fiches d'évaluation du jour</h2>
     <table class="cotations_table">
@@ -42,3 +45,31 @@
         <a href="Membres"><button>Apprenants / Intervenants</button></a>
     </div>
 </div>
+
+<style>
+.cotations_table {
+    text-align: center;
+    background-color: red;
+    width: 100%;
+}
+
+.cotations_table td {
+    max-width: 0px;
+}
+
+.cotations_table div {
+    background-color: aliceblue;
+    margin: 0 15%;
+}
+
+.rectangle {
+    border: solid black 2px;
+    background-color: white;
+}
+
+.access button {
+    width: 85%;
+    padding: 15px 0;
+    margin: 5px 0;
+}
+</style>    

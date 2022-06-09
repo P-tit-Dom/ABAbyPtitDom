@@ -26,6 +26,8 @@ print_five_times();
 </script>'
 ?>
 
+<a href="/edsa-ptitdom_MVC/Seance/0"><button>Start session</button></a>
+
 <div class="inblock">
     <table class="screen-part">
         <tr>
@@ -193,6 +195,48 @@ print_five_times();
     </table>
 </div>
 
+<style>
+    .choose-intervenant {
+    display: flex;
+    justify-content: center;
+    margin-left:15%;
+}
+
+#choose-intervenant {
+    width: 100%;
+    margin-left: 30%;
+}       
+
+.commentaire {
+    width: 70%;
+    height: 4em;
+}
+
+.select_i_d_t {
+    background-color: white;
+    width: 80%;
+}
+
+.select_i_d_t:hover {
+    background-color: #f0f0f0;
+}
+
+.select_i_d_t:active {
+    background-color: #dfdfdf;
+}
+
+.inter-date-com {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boutons {
+    display:inline-flex;
+}
+
+</style>
+
 <!-- Création de PEI -->
 
 <h1>Création du PEI</h1>
@@ -248,13 +292,13 @@ print_five_times();
                 Compétence 2
             </td>
             <td class="element-pei">
-                Objectif 420
+                Objectif 42
             </td>
             <td class="element-pei"></td>
             <td class="element-pei"></td>
             <td class="element-pei"></td>
             <td class="element-pei">
-                <button type="button"><img src="assets/img/Supprimer_pxl.png"></button>
+                <button type="button"><img src="../assets/img/Supprimer_pxl.png"></button>
             </td>
         </tr>
     </table>
@@ -270,100 +314,51 @@ print_five_times();
             <input type="checkbox">
         </td>
         <td>
-            <button type="button" class="img-button"><img src="assets/img/fleche_g.png"></button>
+            <button type="button" class="img-button"><img src="../assets/img/fleche_g.png"></button>
         </td>
         <td>
             Page 1
         </td>
         <td>
-            <button type="button" class="img-button"><img src="assets/img/fleche_d.png"></button>
+            <button type="button" class="img-button"><img src="../assets/img/fleche_d.png"></button>
         </td>
         <td>
-            <button type="button" class="img-button"><img src="assets/img/Save.png"></button>
+            <button type="button" class="img-button"><img src="../assets/img/Save.png"></button>
         </td>
         <td>
-            <button type="button" class="img-button"><img src="assets/img/Print.png"></button>
+            <button type="button" class="img-button"><img src="../assets/img/Print.png"></button>
         </td>
     </tr>
 </table>
 
-<!-- Evaluation journalière -->
-
-<h1>Evaluation journalière</h1>
-
-<table class="screen-part">
-    <tr>
-        <td>
-            <button type="button"><img src="assets/img/home.png"></button>
-        </td>
-        <td>
-            Date : 9/04/2022 - <br>
-            Apprenant :
-        </td>
-        <td class="zone_com-cota">
-            <button class="bouton-cotation green-button" type="button">Commentaire fiche de cotation</button>
-            <div class="commentaire_cotation">
-                Franchement ça s'est bien passé de ouf
-            </div>
-        </td>
-    </tr> 
-</table>
-
-<div class="comportement">
-    <table>
-        <tr>
-            <td>
-                <button class="bouton_comportement_1" type="button">Comportements</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Comportement 1 :
-                <button class="bouton-plus-moins bouton-plus" type="button">+</button><br>
-                <div class="zero">
-                    0
-                </div>
-                <button class="bouton-plus-moins bouton-moins" type="button">-</button>
-            </td>
-        </tr>
-        <tr class="delimitation_comportement">
-            <td>
-                Comportement 2 :<br>
-                <div class="zero">
-                    0
-                </div>
-                <button class="bouton_comportement_2" type="button">Lancer timer</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Comportement 3 :<br>
-                <button class="bouton-plus-moins bouton-plus" type="button">+</button><br>
-                <div class="zero">
-                    0
-                </div>
-                <button class="bouton-plus-moins bouton-moins" type="button">-</button>
-                <div class="zero">
-                    0
-                </div>
-                <button class="bouton_comportement_2" type="button">Lancer timer</button>
-            </td>
-        </tr>
-        <tr class="delimitation_comportement">
-            <td>
-                <button class="bouton_comportement_3" type="button">Réintroduire comportement</button>
-            </td>
-        </tr>
-        <tr class="delimitation_comportement">
-            <td>
-                <button class="bouton_comportement_3" type="button">Ajouter comportement</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button class="bouton_comportement_1" type="button">Fiche de maintien</button>
-            </td>
-        </tr>
-    </table>
-
 </div>
+
+<style>
+.font-size{
+    font-size: 160%;
+}
+
+.lign-pei {
+    border: 1px solid black;
+    border-radius: .1em;
+    background-color: rgb(243, 243, 243);
+    margin: 0 5% 0 5%;
+    height: 25em;
+}
+
+.element-pei {
+    border: 1px solid black;
+    background-color: white;
+    width: 18%;
+}
+
+.img-button {
+    background: none;
+    border: none;
+}
+
+.img-button:hover {
+    cursor:pointer ;
+}
+
+</style>
