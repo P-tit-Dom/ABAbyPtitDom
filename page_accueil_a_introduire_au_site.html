@@ -21,7 +21,7 @@
                     <h1 class="titre_page">ABAbyPtitDom</h1>
                     <table class="centrer_tableau">
                             <td>
-                                <label class="recherche">Séletion d'un apprenant</label> : <input type="search"/>
+                                <label>Sélection d'un apprenant</label> : <input type="search"/>
                             </td>
                             <td>
                                 <button class="bouton_vert" type="button">Afficher la page</button>
@@ -36,13 +36,10 @@
             </tr>
         </table>
         <interface>
-            <div class="bouton_bleu_long"><a href>Définir Domaines / Objectifs / Compétences par défaut</a></div>   
-            <div class="bouton_bleu_long"><a href>Banque d'images du PECS et nouveaux chainages</a></div>
-            <div class="bouton_bleu_long"><a href>Gestion des utilisateurs du site</a></div>
             <h2 class="evaluation_du_jour">
                 Fiches d'évaluation du jour
             </h2>
-            <table>
+            <table class="screen-part">
                 <tr>
                     <td class="bordure_droite">   
                         <qui_fait_quoi>
@@ -63,12 +60,23 @@
                     </td>
                 </tr>
             </table>
-
+            <div>
+                <h2 id="parametres" class="evaluation_du_jour">
+                    Paramètres
+                </h2>
+                <div class="bouton_bleu_long"><a href>Définir Domaines / Objectifs / Compétences par défaut</a></div>   
+                <div class="bouton_bleu_long"><a href>Banque d'images du PECS et nouveaux chainages</a></div>
+                <div class="bouton_bleu_long"><a href>Gestion des utilisateurs du site</a></div>
+            </div>
         </interface>
     </body>
 
 <style>
- 
+
+#parametres {
+    margin-top: 4%;
+}
+
 body {
     background-color: #e6e5d5;
 } 
@@ -79,7 +87,7 @@ body {
     width: 650px;
     text-align: center;
     text-shadow: 5%;
-    color:white;
+    color:rgb(240, 240, 240);
     padding-bottom: 3.5%;
     background-color: rgb(228, 202, 117);
     border: 0.05em solid rgb(226, 156, 43);
@@ -92,7 +100,7 @@ body {
 }
 
     .bouton_bleu {
-        margin-top: 40px;
+        margin-top: 2.5em;
     }
 
 .bouton_vert {
@@ -186,6 +194,7 @@ qui_fait_quoi {
     height: 10em;
     max-height: 20vh;
     border-radius: .1em;
+    width: 70%;
 }
 
 .bordure_droite {
