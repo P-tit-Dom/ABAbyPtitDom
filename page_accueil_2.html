@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <meta charset="utf-8" />
+        <title>
+            Graphics
+        </title>
+        <link href="assets/css/graphics.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <table class="centrer_tableau">
+            <tr>
+                <td class="centrer_image">
+                    <h button><img src="assets/images/Logo.png" class="image" ></h>
+                </td>
+
+                <td>
+                    <h1 class="titre_page">ABAbyPtitDom</h1>
+                    <table class="centrer_tableau">
+                            <td>
+                                <label class="recherche">Séletion d'un apprenant</label> : <input type="search"/>
+                            </td>
+                            <td>
+                                <button class="bouton_vert" type="button">Afficher la page</button>
+                            </td>
+                        </tr>                        
+                    </table>
+                </td>
+
+                <td class="centrer_image">
+                    <h button><img src="assets/images/Profil.png" class="image"></h>
+                </td>
+            </tr>
+        </table>
+        <interface>
+            <div class="bouton_bleu_long"><a href>Définir Domaines / Objectifs / Compétences par défaut</a></div>   
+            <div class="bouton_bleu_long"><a href>Banque d'images du PECS et nouveaux chainages</a></div>
+            <div class="bouton_bleu_long"><a href>Gestion des utilisateurs du site</a></div>
+            <h2 class="evaluation_du_jour">
+                Fiches d'évaluation du jour
+            </h2>
+            <table>
+                <tr>
+                    <td class="bordure_droite">   
+                        <qui_fait_quoi>
+                            Apprenant : enfant 1 <br>
+                            Salle : Salle Violette <br>
+                            Site : La Monjou
+                            <div class="bouton_bleu"><a href>Matin</a></div>
+                        </qui_fait_quoi>
+                    </td>
+
+                    <td>
+                        <qui_fait_quoi>
+                            Apprenant : enfant 2 <br>
+                            Salle : Salle Rose <br>
+                            Site : La Monjou
+                            <div class="bouton_bleu"><a href>Après-midi</a></div>
+                        </qui_fait_quoi>
+                    </td>
+                </tr>
+            </table>
+
+        </interface>
+    </body>
+
+<style>
+ 
+body {
+    background-color: #e6e5d5;
+} 
+
+.titre_page {
+    height: 50px;
+    margin: 1%;
+    width: 650px;
+    text-align: center;
+    text-shadow: 5%;
+    color:white;
+    padding-bottom: 3.5%;
+    background-color: rgb(228, 202, 117);
+    border: 0.05em solid rgb(226, 156, 43);
+    border-radius: .15em;
+}
+
+.bouton_bleu a {
+    height: 50px;
+    width: 350px;
+}
+
+    .bouton_bleu {
+        margin-top: 40px;
+    }
+
+.bouton_vert {
+    padding: .4em;
+    height: 40px;
+    width: 160px;
+    font-weight: none;
+    display: block;
+    margin: 3% auto;
+    color: rgb(250, 250, 250);
+    background-color: rgb(23, 160, 25);
+    border-radius: 10px;
+    transition: background .2s ease-in-out;
+}
+    .bouton_vert:hover {
+        background-color: rgb(17, 112, 18);
+    }
+
+    .bouton_vert:active {
+        background-color: rgb(23, 160, 25);
+        transition: background .0s ease-in-out;
+    }
+
+.bouton_bleu_long a {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: bold;
+        width: 750px;
+        font-weight: none;
+        color: rgb(250, 250, 250);
+        background-color: rgb(116, 154, 229);
+        border: 2px solid #426dbe;
+        border-radius: 15px;
+        transition: background .2s ease-in-out;
+}
+
+    .bouton_bleu_long a:hover {
+        background-color: #426dbe;
+    }
+
+    .bouton_bleu_long {
+        margin-top: 1%; 
+        justify-content: center;
+        display:flex ;
+    }
+
+.evaluation_du_jour {
+    color: white;
+    background-color: rgb(203, 203, 203);
+    border: 2px solid grey;
+    border-radius: .1em;
+    margin: 2% 2% 0 2%;
+    text-align: center;
+}
+
+.centrer_tableau {
+    display: flex;
+    justify-content: center;
+}
+
+.centrer_image {
+    text-align: center;
+}
+
+.image {
+    width: 40%;
+}
+
+interface {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid black;
+    margin: 0 20% 0 20%;
+    height: 40em;
+    max-height: 75vh;
+    border-radius: 1em;
+}
+
+qui_fait_quoi {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid black;
+    border-left: 3px solid black;
+    margin: 4% 15% 0 15%;
+    height: 10em;
+    max-height: 20vh;
+    border-radius: .1em;
+}
+
+.bordure_droite {
+    border-right: 1px solid black;
+    width: 50%;
+}
+
+</style>
