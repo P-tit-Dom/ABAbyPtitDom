@@ -21,7 +21,7 @@
                     <h1 class="titre_page">ABAbyPtitDom</h1>
                     <table class="centrer_tableau">
                             <td>
-                                <label class="recherche">Séletion d'un apprenant</label> : <input type="search"/>
+                                <label class="recherche">Sélection d'un apprenant</label> : <input type="search"/>
                             </td>
                             <td>
                                 <button class="bouton_vert" type="button">Afficher la page</button>
@@ -35,10 +35,8 @@
                 </td>
             </tr>
         </table>
-        <interface>
-            <div class="bouton_bleu_long"><a href>Définir Domaines / Objectifs / Compétences par défaut</a></div>   
-            <div class="bouton_bleu_long"><a href>Banque d'images du PECS et nouveaux chainages</a></div>
-            <div class="bouton_bleu_long"><a href>Gestion des utilisateurs du site</a></div>
+        <interface style="height: 35em">
+
             <h2 class="evaluation_du_jour">
                 Fiches d'évaluation du jour
             </h2>
@@ -49,7 +47,7 @@
                             Apprenant : enfant 1 <br>
                             Salle : Salle Violette <br>
                             Site : La Monjou
-                            <div class="bouton_bleu"><a href>Matin</a></div>
+                            <button class="bouton_bleu">Matin   </button>
                         </qui_fait_quoi>
                     </td>
 
@@ -58,11 +56,17 @@
                             Apprenant : enfant 2 <br>
                             Salle : Salle Rose <br>
                             Site : La Monjou
-                            <div class="bouton_bleu"><a href>Après-midi</a></div>
+                            <button class="bouton_bleu">Après-midi</button>
                         </qui_fait_quoi>
                     </td>
                 </tr>
             </table>
+            <h2 class="evaluation_du_jour" style="margin-top: 4%;">
+                Paramètres
+            </h2>
+            <button class="bouton_bleu_long bouton_1" style="margin: 2% auto 0% auto;">Définir Domaines / Objectifs / Compétences par défaut</button>   
+            <button class="bouton_bleu_long bouton_2" style="margin: 1% auto;">Banque d'images du PECS et nouveaux chainages</button>
+            <button class="bouton_bleu_long bouton_3" style="margin: 0 auto;">Gestion des utilisateurs du site</button>
 
         </interface>
     </body>
@@ -86,13 +90,26 @@ body {
     border-radius: .15em;
 }
 
-.bouton_bleu a {
+.bouton_bleu {
     height: 50px;
-    width: 350px;
+    align-items: center;
+    font-weight: bold;
+    width: 15em;
+    font-weight: none;
+    color: rgb(250, 250, 250);
+    background-color: #89BAB1;
+    border: 4px solid #007745;
+    border-radius: 15px;
+    transition: background .15s ease-in-out;
+    margin: 8% auto 0 auto;
 }
 
-    .bouton_bleu {
-        margin-top: 40px;
+    .bouton_bleu:hover {
+        background-color: #77aaa0;
+    }
+
+    .bouton_bleu:active {
+        background-color: #5f9a8e;
     }
 
 .bouton_vert {
@@ -116,30 +133,56 @@ body {
         transition: background .0s ease-in-out;
     }
 
-.bouton_bleu_long a {
+.bouton_bleu_long{
         height: 60px;
         display: flex;
         align-items: center;
-        justify-content: center;
         text-decoration: none;
         font-weight: bold;
         width: 750px;
         font-weight: none;
         color: rgb(250, 250, 250);
-        background-color: rgb(116, 154, 229);
-        border: 2px solid #426dbe;
         border-radius: 15px;
         transition: background .2s ease-in-out;
 }
 
-    .bouton_bleu_long a:hover {
-        background-color: #426dbe;
+.bouton_1 {
+    background-color: #006f5b;
+    border: 4px solid #007745;
+}
+
+    .bouton_1:hover {
+        background-color: #005C4B;
     }
 
-    .bouton_bleu_long {
-        margin-top: 1%; 
-        justify-content: center;
-        display:flex ;
+    .bouton_1:active {
+        background-color: #004c3e;
+    }
+
+.bouton_2 {
+    background-color: #10A187;
+    border: 4px solid #007745;
+}
+
+    .bouton_2:hover {
+        background-color: #0b8972;
+    }
+
+    .bouton_2:active {
+        background-color: #0b7d68;
+    }
+
+.bouton_3 {
+    background-color: #89BAB1;
+    border: 4px solid #007745;
+}
+
+    .bouton_3:hover {
+        background-color: #77aaa0;
+    }
+
+    .bouton_3:active {
+        background-color: #5f9a8e;
     }
 
 .evaluation_du_jour {
