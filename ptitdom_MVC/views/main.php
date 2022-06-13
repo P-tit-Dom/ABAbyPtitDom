@@ -1,7 +1,7 @@
-<link rel="stylesheet" type="text/css" href="assets/css/content2.css">
+<link rel="stylesheet" type="text/css" href="assets/css/content.css">
 <script type="text/javascript" src="<?= $root ?>/scripts/functions.js"></script>
 
-<interface>
+<div class="encadrement">
     <h2 class="evaluation_du_jour">
         Fiches d'évaluation du jour
     </h2>
@@ -36,7 +36,7 @@
             <div class="bouton_bleu_long"><a href="Membres">Gestion des utilisateurs du site</a></div>
         </div>
     </div>
-</interface>
+</div>
 
 <style>
 #parametres {
@@ -138,17 +138,6 @@ body {
 
 .image {
     width: 40%;
-}
-
-interface {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(241, 241, 241);
-    border: 1px solid black;
-    margin: 0 20% 0 20%;
-    height: 40em;
-    max-height: 75vh;
-    border-radius: 1em;
 }
 
 qui_fait_quoi {

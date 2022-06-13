@@ -1,6 +1,5 @@
 <form id="uho" action="/edsa-ptitdom_MVC/Apprenant/0" method="post"></form>
 
-<body>
         <disposition_colonne>
             <fleche_retour>
                 <a href><img src="assets/img/fleche_g.png" alt=Profil class="retour"></a>
@@ -91,7 +90,6 @@
                 </tr>
             </table>
         </disposition_colonne>
-    </body>
 
     <style>
         
@@ -125,7 +123,7 @@ fleche_retour {
 }
 
 .retour {
-    width: 30%;
+    width: 100%;
 }
 
 .mot {

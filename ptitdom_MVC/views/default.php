@@ -61,8 +61,8 @@ $root = "/edsa-ptitdom_MVC"
         <?php } # end path!=Seance ?>
 
         <main role="main">
-            <div class="fond_aprenant">
-                <?php if (isset($_SESSION['username']) && ($path == "" || $path == "Apprenant")) { ?>
+            <?php if (isset($_SESSION['username']) && ($path == "" || $path == "Apprenant")) { ?>
+                <div class="fond_aprenant">
                     <label for="learner">Sélection d'un apprenant :</label>
                     <select id="learner" class="selection_apprenant"> <!--  onchange="update_action(this)" -->
                         <?php
@@ -76,11 +76,10 @@ $root = "/edsa-ptitdom_MVC"
                         ?>
                     </select>
                     <a href="<?= $root ?>" onclick="this.href='<?= $root ?>/Apprenant/'+this.previousElementSibling.value"><button class="img-button"><img src="<?= $root ?>/assets/img/loupe.png"></button></a>
-            </div>
+                </div>
                         <?php } ?>
                         <?= $content ?>
         </main>
-
         <footer>
         </footer>
         <script type="text/javascript" src="<?= $root ?>/scripts/js.js"></script>

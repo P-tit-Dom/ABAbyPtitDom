@@ -28,6 +28,7 @@ print_five_times();
 
 <a href="/edsa-ptitdom_MVC/Seance/0"><button>Start session</button></a>
 
+<h1>Fiche de cotation</h1>
 <div class="inblock">
     <table class="screen-part">
         <tr>
@@ -71,269 +72,9 @@ print_five_times();
                 Retour de l'intervenant : __________________________________________________________
             </td>
         </tr>
-    </table>
-    <table>
-    <tr>
-        <td>Compétence</td>
-        <td>
-            <table>
-                <tr>
-                    <td>Objectif</td>
-                    <td>
-                        <table>
-                            <tr>
-                                <td>Cible</td>
-                                <td>Type</td>
-                                <td>Historique</td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>Observation</td>
-                    <td>Remarque</td>
-                </tr> 
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td>Compétence 1</td>
-        <td>
-            <table>
-                <tr>
-                    <td>
-                        <select>
-                            <option>Objectif 1</option>
-                        </select>
-                    </td>
-                    <td>
-                        <table>
-                            <tr>
-                                <td>
-                                    <select>
-                                        <option>Cible 1</option>
-                                    </select>
-                                </td>
-                                <td>%</td>
-                                <td>80 20 60</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select>
-                                        <option>Cible 2</option>
-                                    </select>
-                                </td>
-                                <td>%</td>
-                                <td>80 20 60</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select>
-                                        <option>Cible 3</option>
-                                    </select>
-                                </td>
-                                <td>%</td>
-                                <td>80 20 60</td>
-                            </tr>
-                            <tr>
-                                <td>+</td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>adzok</td>
-                    <td>
-                        <select>
-                            <option>ITT</option>
-                            <option selected>NET</option>
-                            <option>ITT ou NET</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <select>
-                            <option>Objectif 2</option>
-                        </select>
-                    </td>
-                    <td>
-                        <table>
-                            <tr>
-                                <td>
-                                    <select>
-                                        <option>Cible 1</option>
-                                    </select>
-                                </td>
-                                <td>%</td>
-                                <td>80 20 60</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select>
-                                        <option>Cible 2</option>
-                                    </select>
-                                </td>
-                                <td>%</td>
-                                <td>80 20 60</td>
-                            </tr>
-                            <tr>
-                                <td>+</td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>adzok</td>
-                    <td>
-                        <select>
-                            <option>ITT</option>
-                            <option selected>NET</option>
-                            <option>ITT ou NET</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr><td>+</td></tr>
-            </table>
-        </td>
-    </tr>
-    <tr><td>+</td></tr>
-    </table>
-</div>
+    </table><br>
 
-<style>
-    .choose-intervenant {
-    display: flex;
-    justify-content: center;
-    margin-left:15%;
-}
-
-#choose-intervenant {
-    width: 100%;
-    margin-left: 30%;
-}       
-
-.commentaire {
-    width: 70%;
-    height: 4em;
-}
-
-.select_i_d_t {
-    background-color: white;
-    width: 80%;
-}
-
-.select_i_d_t:hover {
-    background-color: #f0f0f0;
-}
-
-.select_i_d_t:active {
-    background-color: #dfdfdf;
-}
-
-.inter-date-com {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.boutons {
-    display:inline-flex;
-}
-
-</style>
-
-<!-- Création de PEI -->
-
-<h1>Création du PEI</h1>
-
-<h2>Période 2021/2022</h2>
-
-<table class="screen-part">
-    <tr>
-        <td class="font-size">Domaine</td>
-        <td class="font-size">Compétence</td>
-        <td class="font-size">Objectif</td>
-        <td class="font-size">Constat</td>
-        <td class="font-size">Priorité</td>
-        <td class="font-size">Stratégie</td>
-    </tr>
-    <tr>
-        <td>
-            <select class="select_i_d_t">
-                <option>Domaine 1</option>
-                <option>Domaine 2</option>
-                <option>Domaine 3</option>
-            </select>
-        </td>
-        <td>
-            <select class="select_i_d_t">
-                <option>Compétence 1</option>
-                <option>Compétence 2</option>
-                <option>Compétence 3</option>
-            </select>
-        </td>
-        <td>
-            <select class="select_i_d_t">
-                <option>Objectif 1</option>
-                <option>Objectif 2</option>
-                <option>Objectif 3</option>
-            </select>
-        </td>
-        <td>
-            <button class="green-button" type="button">Ajouter au PEI</button>
-        </td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-
-<div class="lign-pei">
-    <table>
-        <tr>
-            <td class="element-pei">
-                Domaine 1
-            </td>
-            <td class="element-pei">
-                Compétence 2
-            </td>
-            <td class="element-pei">
-                Objectif 42
-            </td>
-            <td class="element-pei"></td>
-            <td class="element-pei"></td>
-            <td class="element-pei"></td>
-            <td class="element-pei">
-                <button type="button"><img src="../assets/img/Supprimer_pxl.png"></button>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<table class="screen-part">
-    <tr>
-        <td>
-            <button class="blue-button">Historique PEI</button>
-        </td>
-        <td>
-            <label>Cloturer PEI</label>
-            <input type="checkbox">
-        </td>
-        <td>
-            <button type="button" class="img-button"><img src="../assets/img/fleche_g.png"></button>
-        </td>
-        <td>
-            Page 1
-        </td>
-        <td>
-            <button type="button" class="img-button"><img src="../assets/img/fleche_d.png"></button>
-        </td>
-        <td>
-            <button type="button" class="img-button"><img src="../assets/img/Save.png"></button>
-        </td>
-        <td>
-            <button type="button" class="img-button"><img src="../assets/img/Print.png"></button>
-        </td>
-    </tr>
-</table>
-
-<h1>Tableau fiche de cotation</h1>
-
-<select class="select_domaine">
+    <select class="select_domaine">
     <option value="1">Domaine 1</option>
     <option value="2">Domaine 2</option>
     <option value="3">Domaine 3</option>
@@ -539,7 +280,143 @@ print_five_times();
       </td>
   </tr>
 </table>
+</div>
 
+<style>
+    .choose-intervenant {
+    display: flex;
+    justify-content: center;
+    margin-left:15%;
+}
+
+#choose-intervenant {
+    width: 100%;
+    margin-left: 30%;
+}       
+
+.commentaire {
+    width: 70%;
+    height: 4em;
+}
+
+.select_i_d_t {
+    background-color: white;
+    width: 80%;
+}
+
+.select_i_d_t:hover {
+    background-color: #f0f0f0;
+}
+
+.select_i_d_t:active {
+    background-color: #dfdfdf;
+}
+
+.inter-date-com {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boutons {
+    display:inline-flex;
+}
+
+</style>
+
+<!-- Création de PEI -->
+
+<h1>Création du PEI</h1>
+
+<h2>Période 2021/2022</h2>
+
+<table class="screen-part">
+    <tr>
+        <td class="font-size">Domaine</td>
+        <td class="font-size">Compétence</td>
+        <td class="font-size">Objectif</td>
+        <td class="font-size">Constat</td>
+        <td class="font-size">Priorité</td>
+        <td class="font-size">Stratégie</td>
+    </tr>
+    <tr>
+        <td>
+            <select class="select_i_d_t">
+                <option>Domaine 1</option>
+                <option>Domaine 2</option>
+                <option>Domaine 3</option>
+            </select>
+        </td>
+        <td>
+            <select class="select_i_d_t">
+                <option>Compétence 1</option>
+                <option>Compétence 2</option>
+                <option>Compétence 3</option>
+            </select>
+        </td>
+        <td>
+            <select class="select_i_d_t">
+                <option>Objectif 1</option>
+                <option>Objectif 2</option>
+                <option>Objectif 3</option>
+            </select>
+        </td>
+        <td>
+            <button class="green-button" type="button">Ajouter au PEI</button>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<div class="lign-pei">
+    <table>
+        <tr>
+            <td class="element-pei">
+                Domaine 1
+            </td>
+            <td class="element-pei">
+                Compétence 2
+            </td>
+            <td class="element-pei">
+                Objectif 42
+            </td>
+            <td class="element-pei"></td>
+            <td class="element-pei"></td>
+            <td class="element-pei"></td>
+            <td class="element-pei">
+                <button type="button"><img src="../assets/img/Supprimer_pxl.png"></button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<table class="screen-part">
+    <tr>
+        <td>
+            <button class="blue-button">Historique PEI</button>
+        </td>
+        <td>
+            <label>Cloturer PEI</label>
+            <input type="checkbox">
+        </td>
+        <td>
+            <button type="button" class="img-button"><img src="../assets/img/fleche_g.png"></button>
+        </td>
+        <td>
+            Page 1
+        </td>
+        <td>
+            <button type="button" class="img-button"><img src="../assets/img/fleche_d.png"></button>
+        </td>
+        <td>
+            <button type="button" class="img-button"><img src="../assets/img/Save.png"></button>
+        </td>
+        <td>
+            <button type="button" class="img-button"><img src="../assets/img/Print.png"></button>
+        </td>
+    </tr>
+</table>
 </div>
 
 <style>
