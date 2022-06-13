@@ -3,7 +3,7 @@ $root = "/edsa-ptitdom_MVC"
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <title>ABA by P'tit Dom</title>
