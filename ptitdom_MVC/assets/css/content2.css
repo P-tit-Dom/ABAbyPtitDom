@@ -84,7 +84,6 @@ disposition_colonne {
 
 .middle_sixty {
     margin: 0 20%;
-    background-color: purple;
 }
 
 .screen-part {
@@ -142,6 +141,7 @@ disposition_colonne {
     .blue-button:active {
         background-color: #496aa8;
     }
+
 
 /* Onglet */
 

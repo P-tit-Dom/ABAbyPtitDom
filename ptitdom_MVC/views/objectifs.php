@@ -94,6 +94,7 @@
     </body>
 
     <style>
+        
 .delimitation{
     text-align: center;
     border-right: 1px solid black;

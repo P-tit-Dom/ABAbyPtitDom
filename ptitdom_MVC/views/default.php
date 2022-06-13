@@ -38,7 +38,9 @@ $root = "/edsa-ptitdom_MVC"
                     <td>
                         <?php if (isset($_SESSION['username'])) { ?>
                             <form action="" method="post">
-                                <button name="disconnection"><img src="assets/img/Exit.png" alt="Déconnexion"></button>
+                                <a href="<?= $root ?>">
+                                    <button name="disconnection"><img src="<?= $root ?>/assets/img/Exit.png" alt="Déconnexion"></button>
+                                </a>
                             </form>
                         <?php } ?>
                     </td>
@@ -59,26 +61,58 @@ $root = "/edsa-ptitdom_MVC"
         <?php } # end path!=Seance ?>
 
         <main role="main">
-            <?php if (isset($_SESSION['username']) && ($path == "" || $path == "Apprenant")) { ?>
-                <label for="learner">Sélection d'un apprenant :</label>
-                <select id="learner"> <!--  onchange="update_action(this)" -->
-                    <?php
-                    foreach($aps as $a) {
-                        echo '<option value="'.$a['id'].'"';
-                        if (isset($ap['id']) && $ap['id'] == $a['id']) { // ---------------- $ap being the current learner -------------------------------------------------------------------------------------------- //
-                            echo ' selected';
+            <div class="fond_aprenant">
+                <?php if (isset($_SESSION['username']) && ($path == "" || $path == "Apprenant")) { ?>
+                    <label for="learner">Sélection d'un apprenant :</label>
+                    <select id="learner" class="selection_apprenant"> <!--  onchange="update_action(this)" -->
+                        <?php
+                        foreach($aps as $a) {
+                            echo '<option value="'.$a['id'].'"';
+                            if (isset($ap['id']) && $ap['id'] == $a['id']) { // ---------------- $ap being the current learner -------------------------------------------------------------------------------------------- //
+                                echo ' selected';
+                            }
+                            echo '>'.$a['nom'].'</option>';
                         }
-                        echo '>'.$a['nom'].'</option>';
-                    }
-                    ?>
-                </select>
-                <a href="<?= $root ?>" onclick="this.href='<?= $root ?>/Apprenant/'+this.previousElementSibling.value"><button>send</button></a>
-            <?php } ?>
-            <?= $content ?>
+                        ?>
+                    </select>
+                    <a href="<?= $root ?>" onclick="this.href='<?= $root ?>/Apprenant/'+this.previousElementSibling.value"><button class="img-button"><img src="<?= $root ?>/assets/img/loupe.png"></button></a>
+            </div>
+                        <?php } ?>
+                        <?= $content ?>
         </main>
 
         <footer>
         </footer>
         <script type="text/javascript" src="<?= $root ?>/scripts/js.js"></script>
     </body>
+
+    <style>
+    
+    .fond_aprenant {
+        padding: .5%;
+        width: 20%;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: .5em;
+        margin: auto;
+    }
+    
+    .loupe {
+        background-color: none;
+    }
+
+    #afficher_page {
+        margin-left: 1%;
+    }
+    
+    .selection_apprenant {  
+        background-color: white;
+        border: 2px solid grey;
+        margin-bottom: 1%;
+    }
+
+    .selection_apprenant:hover {
+        background-color: rgb(240, 240, 240);
+    }
+</style>
 </html>

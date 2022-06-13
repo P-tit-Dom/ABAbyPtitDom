@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="scripts/tableau_enfer_script2.js"></script>
+</head>
+<body>
+<select >
+    <option value="1">Domaine 1</option>
+    <option value="2">Domaine 2</option>
+    <option value="3">Domaine 3</option>
+    <option value="4">Domaine 4</option>
+</select>
+
+<select >
+    <option value="1">Compétence 1</option>
+    <option value="2">Compétence 2</option>
+    <option value="3">Compétence 3</option>
+    <option value="4">Compétence 4</option>
+</select>
+
+<select >
+    <option value="1">Objectif 1</option>
+    <option value="2">Objectif 2</option>
+    <option value="3">Objectif 3</option>
+    <option value="4">Objectif 4</option>
+</select>
+
+<button  type="button" onclick="nouvelleCible()"> + </button>
+
+<table border="2" id="tabledomaine" bordercolor="green">
+    <tr>
+        <td> <p>Domaine 1</p> </td>
+        <td>  
+            <table  border="2" bordercolor="blue">
+                <tr>
+                    <td> <p>Compétence 1</p> </td>
+                    <td>
+                      <table  border="2" bordercolor="red">
+                          <tr>
+                              <td colspan="2"> <p>Objectif 1</p> </td>
+                              <td>
+                                  <table border="2" bordercolor="black"> 
+                                        <tr>
+                                            <td> Cible exemple </td>
+                                            <td> historique</td>
+                                            <td><button class="mot" type="button" onclick="suppressCible(this)"><img src="assets/images/Supprimer_pxl.png "></button> </td>
+                                        </tr> 
+                                        <tr>  
+                                            <td  colspan="3">
+                                                <select style="width:80%" >
+                                                    <option value="Cible1">Cible1</option>
+                                                    <option value="Cible2">Cible2</option>
+                                                    <option value="Cible3">Cible3</option>
+                                                    <option value="Cible4">Cible4</option>
+                                                </select> 
+                                                <button  type="button" onclick="nouvelleCible(this)"> + </button>
+                                            </td>
+                                        </tr>
+                                  </table>
+                              </td>
+                              <td><textarea id="story" rows="2" cols="26" placeholder="Observations"></textarea></td>
+                              <td>
+                                  <select style="float: right;">
+                                      <option value="1">NET</option>
+                                      <option value="2">ITT</option>
+                                      <option value="3">NET et/ou ITT</option>
+                                  </select>
+                              </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2"> <p>Objectif 2</p> </td>
+                            <td>
+                              <table border="2" bordercolor="black">
+                                  <tr>
+                                    <td> Cible exemple </td>
+                                    <td> historique</td>
+                                    <td><button class="mot" type="button" onclick="suppressCible(this)"><img src="assets/images/Supprimer_pxl.png "></button> </td>
+                                  </tr> 
+                                  <tr>
+                                    <td> Cible exemple 2 </td>
+                                    <td> historique</td>
+                                    <td><button class="mot" type="button" onclick="suppressCible(this)"><img src="assets/images/Supprimer_pxl.png "></button> </td>
+                                  </tr>  
+                                  <tr>  
+                                    <td  colspan="3">
+                                      <select style="width:80%" >
+                                          <option value="Cible1">Cible1</option>
+                                          <option value="Cible2">Cible2</option>
+                                          <option value="Cible3">Cible3</option>
+                                          <option value="Cible4">Cible4</option>
+                                      </select> 
+                                      <button  type="button" onclick="nouvelleCible(this)"> + </button>
+                                    </td>
+                                  </tr>
+                              </table>
+                            </td>
+                            <td><textarea id="story" rows="2" cols="26" placeholder="Observations"></textarea></td>
+                            <td>
+                                <select style="float: right;">
+                                    <option value="1">NET</option>
+                                    <option value="2">ITT</option>
+                                    <option value="3">NET et/ou ITT</option>
+                                </select>
+                            </td>
+                        </tr>
+                      </table>
+                    </td>
+                </tr>
+                <tr>
+                  <td> <p>Compétence 2</p> </td>
+                  <td>
+                      <table  border="2" bordercolor="red">
+                          <tr>
+                              <td colspan="2"> <p>Objectif 1</p> </td>
+                              <td>
+                                  <table border="2" bordercolor="black">
+                                        <tr>
+                                            <td> Cible exemple </td>
+                                            <td> historique</td>
+                                            <td><button class="mot" type="button" onclick="suppressCible(this)"><img src="assets/images/Supprimer_pxl.png "></button> </td>
+                                        </tr>
+                                        <tr>  
+                                            <td  colspan="3">
+                                                <select style="width:80%" >
+                                                    <option value="Cible1">Cible1</option>
+                                                    <option value="Cible2">Cible2</option>
+                                                    <option value="Cible3">Cible3</option>
+                                                    <option value="Cible4">Cible4</option>
+                                                </select> 
+                                                <button  type="button" onclick="nouvelleCible(this)"> + </button>
+                                            </td>
+                                        </tr>
+                                  </table>
+                              </td>
+                              <td><textarea id="story" rows="2" cols="26" placeholder="Observations"></textarea></td>
+                              <td>
+                                  <select style="float: right;">
+                                      <option value="1">NET</option>
+                                      <option value="2">ITT</option>
+                                      <option value="3">NET et/ou ITT</option>
+                                  </select>
+                              </td>
+                          </tr>
+                      </table>
+                  </td>
+              </tr>
+            </table> 
+        </td>
+    </tr>
+    <tr>
+      <td> <p>Domaine 2</p> </td>
+      <td>  
+          <table  border="2" bordercolor="blue">
+              <tr>
+                  <td> <p>Compétence 1</p> </td>
+                  <td>
+                      <table  border="2" bordercolor="red">
+                          <tr>
+                              <td colspan="2"> <p>Objectif 1</p> </td>
+                              <td>
+                                  <table border="2" id="tablecible" bordercolor="black">
+                                        <tr>
+                                            <td> Cible exemple </td>
+                                            <td> historique</td>
+                                            <td><button class="mot" type="button" onclick="suppressCible(this)"><img src="assets/images/Supprimer_pxl.png "></button> </td>
+                                        </tr> 
+                                        <tr>  
+                                            <td  colspan="3">
+                                                <select style="width:80%" >
+                                                    <option value="Cible1">Cible1</option>
+                                                    <option value="Cible2">Cible2</option>
+                                                    <option value="Cible3">Cible3</option>
+                                                    <option value="Cible4">Cible4</option>
+                                                </select> 
+                                                <button  type="button" onclick="nouvelleCible(this)"> + </button>
+                                            </td>
+                                        </tr>
+                                  </table>
+                              </td>
+                              <td><textarea id="story" rows="2" cols="26" placeholder="Observations"></textarea></td>
+                              <td>
+                                  <select style="float: right;">
+                                      <option value="1">NET</option>
+                                      <option value="2">ITT</option>
+                                      <option value="3">NET et/ou ITT</option>
+                                  </select>
+                              </td>
+                          </tr>
+                      </table>
+                  </td>
+              </tr>
+          </table> 
+      </td>
+  </tr>
+</table>
+</body>
+<style>
+    .test{
+        vertical-align: text-top;
+    }
+</style>
+
+</html>
