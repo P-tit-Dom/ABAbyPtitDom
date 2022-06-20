@@ -1,10 +1,7 @@
-<form id="uho" action="/edsa-ptitdom_MVC/Apprenant/0" method="post"></form>
+    <form id="uho" action="/edsa-ptitdom_MVC/Apprenant/0" method="post"></form>
 
         <disposition_colonne>
-            <fleche_retour>
-                <a href><img src="assets/img/fleche_g.png" alt=Profil class="retour"></a>
-            </fleche_retour>
-            <table>
+            <table style="width: 100%;">
                 <tr>
                     <th class="entete delimitation">Domaines</th>
                     <th class="entete delimitation">Compétences</th>
@@ -114,16 +111,11 @@ element {
 }
 
 .pages {
-    margin-top: 2%;
-    width: 50%;
-}
-
-fleche_retour {
-    width: 20%;
+    width: 15%;
 }
 
 .retour {
-    width: 100%;
+    width: 30%;
 }
 
 .mot {
@@ -142,7 +134,7 @@ max-height: 55vh;
 
 .f_d {
 margin-right: 50%;
-width: 30%  ;
+width: 30%;
 }
 
 .f_g  {
