@@ -458,3 +458,225 @@ print_five_times();
 }
 
 </style>
+
+
+<!--Paramétrage-->
+<h1>Cibles personnalisées</h1>
+
+<table style="width: 100%;">
+    <tr>
+        <td><h2>Domaine :</h2></td>
+        <td><h2>Compétence :</h2></td>
+        <td><h2>Objectif :</h2></td>
+        <td style="width: 15%;"></td>
+    </tr>
+    <tr>
+        <td><select class="select_cible">
+            <option>Domaine 1</option>
+            <option>Domaine 2</option>
+            <option>Domaine 3</option>
+        </select></td>
+        <td><select class="select_cible">
+            <option>Compétence 1</option>
+            <option>Compétence 2</option>
+            <option>Compétence 3</option>
+        </select></td>
+        <td><select class="select_cible">
+            <option>Objectif 1</option>
+            <option>Objectif 2</option>
+            <option>Objectif 3</option>
+        </select></td>
+        <td><button type="button" class="green-button">Ajouter Cible</button></td>
+    </tr>
+</table>
+
+<table style="width: 55%;">
+    <tr>
+        <td>Choix d'un modèle d'objectif</td>
+        <td><select class="select_cible">
+            <option>- Cibles en cours -</option>
+            <option>Modèle 1</option>
+            <option>Modèle 2</option>
+            <option>Modèle 3</option>
+        </select></td>
+        <td><button type="button" class="green-button">Créer Modèle</button></td>
+    </tr>
+</table>
+
+<h2>Cibles associées à : Domaine x / Compétence x / Objectif x</h2>
+
+<table style="width: 100%;">
+    <tr>
+        <td style="width: 25%;">Nom de l'activité</td>
+        <td style="width: 22%;">Format de cotation</td>
+        <td style="width: 14%;">Acquisition</td>
+        <td style="width: 40%;">Révision</td>
+    </tr>
+</table>
+
+<div class="liste_cibles">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 30%; text-align: left;" class="element_cible">Cible 1</td>
+            <td style="width: 10%;" class="element_cible"><select style="width: 100%;" class="select_cible">
+                <option>+/G</option>
+                <option>Oui/Non</option>
+            </select></td>
+            <td class="element_cible"><input type="text" class="input_text"> séances à <input type="text" class="input_text">% ou plus</td>
+            <td class="element_cible"><input type="text" class="input_text"> séances à <input type="text" class="input_text">% ou moins</td>
+            <td style="width: 2%;" class="element_cible"><button type="button" style="cursor: pointer;"><img src="../assets/img/Supprimer_pxl.png"></button></td>
+        </tr>
+    </table>
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 30%; text-align: left;" class="element_cible">Cible 2</td>
+            <td style="width: 10%;" class="element_cible"><select style="width: 100%;" class="select_cible">
+                <option>+/G</option>
+                <option>Oui/Non</option>
+            </select></td>
+            <td class="element_cible"><input type="text" class="input_text"> séances à <input type="text" class="input_text">% ou plus</td>
+            <td class="element_cible"><input type="text" class="input_text"> séances à <input type="text" class="input_text">% ou moins</td>
+            <td style="width: 2%;" class="element_cible"><button type="button" style="cursor: pointer;"><img src="../assets/img/Supprimer_pxl.png"></button></td>
+        </tr>
+    </table>
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 30%; text-align: left;" class="element_cible">Cible 3</td>
+            <td style="width: 10%;" class="element_cible"><select style="width: 100%;" class="select_cible">
+                <option>+/G</option>
+                <option>Oui/Non</option>
+            </select></td>
+            <td class="element_cible"><input type="text" class="input_text"> séances à <input type="text" class="input_text">% ou plus</td>
+            <td class="element_cible"><input type="text" class="input_text"> séances à <input type="text" class="input_text">% ou moins</td>
+            <td style="width: 2%;" class="element_cible"><button type="button" style="cursor: pointer;"><img src="../assets/img/Supprimer_pxl.png"></button></td>
+        </tr>
+    </table>
+</div>
+
+<table style="width: 100%; text-align: left;">
+    <tr>
+        <td style="width: 40%"></td>
+        <td style="width: 5%"><button type="button" class="img-button"><img class="fleches" src="../assets/img/fleche_g.png" alt="Profil" class="f_g"></button></td>
+        <td style="width: 5%; text-align: center;">Page 1</td>
+        <td style="width: 5%"><button type="button" class="img-button"><img class="fleches" src="../assets/img/fleche_d.png" alt="Profil" class="f_d"></button></td>
+        <td style="width: 25%"></td>
+        <td style="width: 20%;"><button style="margin: 2% 0 2% 10%;" class="green-button" type="button">Valider sélection</button></td>
+    </tr>
+</table>
+
+<div style="height: 22em;" class="liste_cibles">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 50%;">
+                <table style="width: 100%; height: 15em; ">
+                    <tr>
+                        <td class="banque_image_pecs"><strong>Classeur PECS :</td>
+                    </tr>
+                    <tr>
+                        <td class="banque_image_pecs" style="padding-top: 10%;">Banque d'images PECS :</td>
+                    </tr>
+                    <tr>
+                        <td class="banque_image_pecs"><select class="select_cible">
+                            <option>Gateau</option>
+                            <option>Verre</option>
+                            <option>Ballon</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="green-button">Ajouter au classeur</button></td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 50%;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td>Classeur :</td>
+                        <td>
+                            <div class="classeur_pecs">
+                                <element> 
+                                    <h class="mot">Verre</h>
+                                    <h button class="mot img-button" type="button"><img src="../assets/img/Supprimer_pxl.png "></button></h>
+                                </element>
+                                <element> 
+                                    <h class="mot">Gateau</h>
+                                    <h button class="mot img-button" type="button"><img src="../assets/img/Supprimer_pxl.png "></button></h>
+                                </element>
+                                <element> 
+                                    <h class="mot">Stop</h>
+                                    <h button class="mot img-button" type="button"><img src="../assets/img/Supprimer_pxl.png "></button></h>
+                                </element>  
+                            </div>  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%;"></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td style="width: 30%;"></td>
+                                    <td style="width: 5%;">
+                                        <button type="button" style ="" class="img-button"><img src="../assets/img/fleche_g.png" class="f_g"></button> 
+                                    </td>
+                                    <td style="width: 10%;">Page 1</td>
+                                    <td style="width: 5%;"> 
+                                        <button type="button" class="img-button"><img src="../assets/img/fleche_d.png" alt="Profil" class="f_d"></button>
+                                    </td>
+                                    <td style="width: 50%;"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </disposition_colonne>
+</div>
+
+
+<style>    
+.banque_image_pecs {
+    text-align: left;
+    padding-left: 10%;
+}
+
+.classeur_pecs {
+    margin-top: 5%;
+    width: 80%;
+    height: 15em;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid black;
+}
+
+.input_text {
+    width: 3%;
+}
+
+.element_cible {
+    border: 1px solid black;
+    background-color:rgb(244, 244, 244); 
+}
+
+.liste_cibles {
+    margin: 0 4%;
+    background-color: white;
+    border: 1px solid black;
+    height: 30em;
+}
+
+element {
+    border: 1px solid black;
+    background-color:rgb(244, 244, 244);
+    display: flex;
+    justify-content: space-between;
+}
+
+.select_cible {
+    background-color: white;
+    height: 2em;
+    width: 70%;
+}
+
+.select_cible:hover {
+    background-color:rgb(244, 244, 244);
+}
+</style>

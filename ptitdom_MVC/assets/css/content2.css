@@ -150,6 +150,14 @@ h1:hover {
         background-color: #496aa8;
     }
 
+.img-button {
+    background: none;
+    border: none;
+}
+
+.img-button:hover {
+    cursor:pointer ;
+}    
 
 /* Onglet */
 
