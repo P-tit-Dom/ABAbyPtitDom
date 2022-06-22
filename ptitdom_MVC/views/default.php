@@ -48,11 +48,11 @@ $root = "/edsa-ptitdom_MVC"
             </table>
 
             <?php if (isset($_SESSION['username'])) { ?>
-                <div>
-                    <a href="<?= $root ?>"><button type="button">Psychologue</button></a>  <!-- based on role (session) -->
+                <div style="margin-left: 3%;">
+                    <a href="<?= $root ?>"><button class="button_psy" type="button">Psychologue</button></a>  <!-- based on role (session) -->
                     <?php foreach(explode('/', $_GET['p']) as $p) {
                         if ($p != "") {
-                            echo " > ".$p;
+                            echo ' <img src="../assets/img/suivant.png"> '.$p;
                         }
                     } ?>
                 </div>
@@ -86,7 +86,22 @@ $root = "/edsa-ptitdom_MVC"
     </body>
 
     <style>
-    
+    .button_psy {
+        background-color: #AB6EB1;
+        border: 1px solid #834889;
+        color: white;
+        border-radius: 1em;
+        width: 7%;
+        height: 2em;
+        font-weight: bold;
+    }
+
+    .button_psy:hover {
+        background-color: #834889;
+        transition: background .20s ease-in-out;
+    }
+
+
     .fond_aprenant {
         padding: .5%;
         width: 20%;
