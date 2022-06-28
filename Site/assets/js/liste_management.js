@@ -16,7 +16,7 @@ function ajouterCompetence() {
 		;
 	} else {
 		for (i of listeCompetences.children) {
-			if (i.classList.contains("hidden")) {
+			if (i.classList.contains("hidden")) { 
 				;
 			} else {
 				visible = i

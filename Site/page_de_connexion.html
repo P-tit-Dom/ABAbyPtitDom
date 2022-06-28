@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <meta charset="utf-8" />
-    <title>
-      Page de connexion
-    </title>
-    <link href="assets/css/graphics.css" rel="stylesheet" type="text/css" />
-  </head>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<meta charset="utf-8" />
+	<title>
+		Page de connexion
+	</title>
+	<link href="assets/css/graphics.css" rel="stylesheet" type="text/css" />
+</head>
 
-  <body>
-      <header>
-        <disposition_colonne>
-            <a href><img src="assets/images/Logo.png" alt="Logo" class="haut"></a>
-            <h1 class="titre_page">ABA by Ptit Dom</h1>
-        </disposition_colonne>
-      </header>
+<body>
+	<header>
+		<disposition_colonne>
+			<a href><img src="assets/images/Logo.png" alt="Logo" class="haut"></a>
+			<h1 class="titre_page">ABA by Ptit Dom</h1>
+		</disposition_colonne>
+	</header>
 
-    <article>
-      <connexion>
-            <label class="id_mdp">Identifiant</label> : <input type="text" class="input_text"/>
-      </connexion>
+	<article>
+		<connexion>
+			<label class="id_mdp">Identifiant</label> : <input type="text" class="input_text" />
+		</connexion>
 
-      <connexion>
-          <label class="id_mdp">Mot de passe</label> : <input type="text" class="input_text"/>
-      </connexion>
-    </article>  
+		<connexion>
+			<label class="id_mdp">Mot de passe</label> : <input type="text" class="input_text" />
+		</connexion>
+	</article>
 
-      <button class="bouton_vert" type="button">Se connecter</button>
+	<button class="bouton_vert" type="button">Se connecter</button>
+</body>
 
+<style>
+	.id_mdp {
+		font-weight: bold;
+		font-size: larger;
+	}
 
-  </body>
+	.input_text {
+		width: 30%;
+	}
 
-  <style>
+	article {
+		margin: 10% 35%;
+	}
 
-    .id_mdp{
-        font-weight: bold;
-        font-size: larger;
-    }
+	connexion {
+		display: flex;
+		flex-direction: column;
+		flex-flow: row;
+		justify-content: left;
+		padding: 20px;
+		width: 900px;
+	}
 
-    .input_text{
-        width: 30%;
-    }
+	body {
+		overflow-y: hidden;
+	}
 
-    article{
-        margin: 10% 35%;
-    }
-
-    connexion{
-      display:flex ;
-      flex-direction: column;
-      flex-flow: row ; 
-      justify-content: left;
-      padding: 20px;
-      width: 900px;
-    }
-
-    body{
-      overflow-y: hidden; 
-    }
-
-    .haut {
-      text-align: center;
-      width: 40%;
-    }
-    
-  </style>
+	.haut {
+		text-align: center;
+		width: 40%;
+	}
+</style>
